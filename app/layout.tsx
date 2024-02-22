@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar, Footer } from "@/components";
 
 const ebg = EB_Garamond({
   subsets: ['latin'],
@@ -35,7 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ebg.variable} ${cormorant.variable} ${inter.variable}`}>
       <body className='relative'>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

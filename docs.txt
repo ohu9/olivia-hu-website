@@ -1,11 +1,26 @@
-basics
+BASICS
 - run app using: npm run dev
 - github: https://github.com/ohu9/olivia-hu-website.git
-
+- use 'rafce' to auto set-up new react page
 
 next.js / typescript / tailwind tutorials:
     # https://www.youtube.com/watch?v=uRCtx04zRPk
     # https://www.youtube.com/watch?v=pUNSHPyVryU
+
+ROUTING //////////////////////////////////////////////////////////////
+
+routing/layout
+    - app folder should contain only pages, layouts, specific next13 files that will be presented as a route
+    - everything else goes in the components folder
+    - navbar and footer components set globally in layout.tsx
+
+server/client side rendering
+- client-side components in ./app/components folder
+
+
+STYLING //////////////////////////////////////////////////////////////
+
+tailwind
 
 customize tailwind variables in tailwind.config.ts
     # https://tailwindcss.com/docs/configuration
@@ -19,5 +34,5 @@ google fonts import
 
 css custom variables
 
-routing
+
 
