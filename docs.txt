@@ -1,3 +1,23 @@
+basics
+- run app using: npm run dev
+- github: https://github.com/ohu9/olivia-hu-website.git
+
+
 next.js / typescript / tailwind tutorials:
-- https://www.youtube.com/watch?v=uRCtx04zRPk
-- https://www.youtube.com/watch?v=pUNSHPyVryU
+    # https://www.youtube.com/watch?v=uRCtx04zRPk
+    # https://www.youtube.com/watch?v=pUNSHPyVryU
+
+customize tailwind variables in tailwind.config.ts
+    # https://tailwindcss.com/docs/configuration
+    - custom colors, fonts, media breaks, spacing, page templates
+
+google fonts import
+    # next.js docs: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css
+    # variable fonts: https://fonts.google.com/variablefonts
+    - display:'swap' indicates to load page immediately with fall-back fonts, if needed
+    - add to tailwind css: https://tailwindcss.com/docs/font-family#customizing-your-theme
+
+css custom variables
+
+routing
+
