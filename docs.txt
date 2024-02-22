@@ -1,0 +1,3 @@
+next.js / typescript / tailwind tutorials:
+- https://www.youtube.com/watch?v=uRCtx04zRPk
+- https://www.youtube.com/watch?v=pUNSHPyVryU
