@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        bg: "#fafafa"
+      },
       screens: {
         'sm': '640px', // => @media (min-width: 640px)
         'md': '768px',  // => @media (min-width: 768px)
