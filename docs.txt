@@ -12,6 +12,7 @@ ROUTING //////////////////////////////////////////////////////////////
 routing/layout
     - app folder should contain only pages, layouts, specific next13 files that will be presented as a route
     - everything else goes in the components folder
+    - use index.ts folder to export/import components in a more simple
     - navbar and footer components set globally in layout.tsx
 
 server/client side rendering
@@ -21,6 +22,7 @@ server/client side rendering
 STYLING //////////////////////////////////////////////////////////////
 
 tailwind
+- use global styles for :
 
 customize tailwind variables in tailwind.config.ts
     # https://tailwindcss.com/docs/configuration

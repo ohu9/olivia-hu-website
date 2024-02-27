@@ -6,11 +6,11 @@
   background-color: #fafafa;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     background-color: #2b2b2b;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
