@@ -5,27 +5,16 @@ import Link from 'next/link';
 // import { motion } from 'framer-motion';
 
 const tabs = ['olivia hu', 'about', 'projects', 'experience', 'contact', 'resume'];
-const buttons = tabs.map(tab => <button className='nav-btn'>{tab}</button>);
+const buttons = tabs.map(tab => <button className='px-2'>{tab}</button>);
 
 const Navbar = () => {
     return (
-    <div className='navbar'>
-        <Link href="/" className='p-4'>
-            <Image
-                src="/logo.jpeg"
-                width={40}
-                height={40}
-                alt='Agora logo'
-            />
-        </Link>
-        <a href="#top" className='home-btn'>{buttons[0]}</a>
-        <div className="buttons">
-            <a href="#section-about">{buttons[1]}</a>
-            <a href="#section-projects">{buttons[2]}</a>
-            {/* <a href="#section-experience">{buttons[3]}</a> */}
-            <a href="#section-contact" >{buttons[4]}</a>
-            <a href="https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view?usp=sharing" target="_blank" className='right-btn'>{buttons[5]}</a>
-        </div>
+    <div className='flex-col gap-2'>
+        <Link href="/" className='w-3 p-4'><Image src="/logo.jpeg" width={40} height={40} alt='home' /></Link>
+        <Link href="/about">{buttons[1]}</Link>
+        <Link href="/projects">{buttons[2]}</Link>
+        <Link href="/contact">{buttons[4]}</Link>
+        <Link href="https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view?usp=sharing" target="_blank">{buttons[5]}</Link>
     </div>
     );
 }
