@@ -15,6 +15,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: "#fafafa";
+  font-family: 'Garamond';
 }
 
 @layer utilities {

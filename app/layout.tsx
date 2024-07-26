@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/components";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const ebg = EB_Garamond({
   subsets: ['latin'],
