@@ -30,22 +30,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-
-// const ebg = EB_Garamond({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-ebg',
-// });
-
-// const cormorant = Cormorant_Garamond({
-//   weight: ['300', '400', '500', '600', '700'],
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-cormorant',
-// });
-
-// const inter = Inter({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-inter',
-// });

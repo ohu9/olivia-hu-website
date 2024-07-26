@@ -28,14 +28,15 @@ customize tailwind variables in tailwind.config.ts
     - custom colors, fonts, media breaks, spacing, page templates
 
 google fonts import
+    # update: refer to this link https://blog.logrocket.com/how-to-use-custom-fonts-tailwind-css/ 
     # next.js docs: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css
     # variable fonts: https://fonts.google.com/variablefonts
     - display:'swap' indicates to load page immediately with fall-back fonts, if needed
     - add to tailwind css: https://tailwindcss.com/docs/font-family#customizing-your-theme
     custom variables:
-    - --font-cormorant, --font-ebg, --font-inter
+    - cormorant, ebg, inter
 
-css custom variables
+
 
 
 
