@@ -45,7 +45,7 @@ export default function Navbar() {
                     width={400} 
                     height={400} 
                     alt='home' 
-                    className='w-8 h-8 ml-3 mt-2 hover:cursor-pointer'/>
+                    className='w-9 h-9 ml-3 mt-2 hover:cursor-pointer'/>
             </Link>
             <div className="flex gap-6 ">
             {
@@ -121,6 +121,7 @@ const Hamburger = () => {
         //     </Link>
         // </Disclosure>
 )}
+
 
 
 
