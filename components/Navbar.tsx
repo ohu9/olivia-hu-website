@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
+import { usePathname } from "next/navigation";
 
 const tabs = [
     {
@@ -42,6 +43,10 @@ const tabs = [
 ]
 
 export default function Navbar() {
+
+    const pathName = usePathname();
+    tabs.map(tab => tab.current = (tab.href == pathName))
+
     return (
     <>
         <MobileMenu/>
@@ -54,13 +59,14 @@ export default function Navbar() {
                     alt='home' 
                     className='w-8 h-8 ml-3 mt-2 hover:cursor-pointer'/>
             </Link>
-            <div className="flex gap-6 ">
+            <div className="flex gap-6 mr-12">
             {
                 tabs.slice(1).map(tab => 
                     <Link 
                         href={tab.href} 
                         target={tab.target}
-                        className="px-2 text-gray-500 hover:text-black hover:font-450 tracking-widest transition-all duration-150">
+                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-500",
+                                    "px-2 hover:text-black hover:font-450 tracking-widest transition-all duration-150")}>
                         {tab.name}
                     </Link>
                 )
