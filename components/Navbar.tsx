@@ -51,22 +51,24 @@ export default function Navbar() {
     <>
         <MobileMenu/>
         <nav className='hidden p-4 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
-            <Link href="/">
+            <Link href="/" className="flex items-center gap-5">
                 <Image 
                     src="/logo.png" 
                     width={400} 
                     height={400} 
                     alt='home' 
-                    className='w-8 h-8 ml-3 mt-2 hover:cursor-pointer'/>
+                    className='w-7 h-7 ml-3 mt-2 hover:cursor-pointer'/>
+                <p className="px-2 mt-1 text-black font-semibold tracking-[.2rem]">olivia hu</p>
             </Link>
             <div className="flex gap-6 mr-12">
+                
             {
                 tabs.slice(1).map(tab => 
                     <Link 
                         href={tab.href} 
                         target={tab.target}
-                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-600",
-                                    "px-2 hover:text-black hover:font-450 tracking-widest transition-all duration-150")}>
+                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-500",
+                                    "px-2 hover:text-black hover:font-450 tracking-[.2rem] transition-all duration-150")}>
                         {tab.name}
                     </Link>
                 )
