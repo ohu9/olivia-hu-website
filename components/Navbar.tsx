@@ -50,7 +50,7 @@ export default function Navbar() {
     return (
     <>
         <MobileMenu/>
-        <nav className='hidden p-4 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
+        <nav className='hidden p-6 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
             <Link href="/" className="flex items-center gap-5">
                 <Image 
                     src="/logo.png" 
