@@ -65,7 +65,7 @@ export default function Navbar() {
                     <Link 
                         href={tab.href} 
                         target={tab.target}
-                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-500",
+                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-600",
                                     "px-2 hover:text-black hover:font-450 tracking-widest transition-all duration-150")}>
                         {tab.name}
                     </Link>
