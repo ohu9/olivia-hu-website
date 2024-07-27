@@ -26,7 +26,7 @@ export default function RootLayout({
 				<main className="mx-auto lg:mx-32 lg:my-10">
 					{children}
 				</main>
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
 	);
