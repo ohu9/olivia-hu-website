@@ -1,12 +1,12 @@
-import { Hello, Goat } from "@/components/Animations";
+import { Hello, Home } from "@/components/Animations";
 
-export default function Home() {
+export default function Page() {
 	return (
 		<div className="snap-y snap-mandatory overscroll-y-scroll h-[100vh]">
 			{/* HOME */}
 			<section id='home' className="snap-start" />
 			<div className="flex flex-row h-[1000px] bg-[#F4F4F5]">
-				<Goat />
+				<Home />
 			</div>
 
 			{/* ABOUT */}
