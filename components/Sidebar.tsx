@@ -24,7 +24,7 @@ export default function Sidebar() {
         <div className="flex flex-col mt-10 ml-8 gap-7 absolute z-10">
             {
                 buttons.map(item =>
-                    <Link href={item.href} target="_blank">
+                    <Link href={item.href} target="_blank" key={item.name}>
                         <Image
                             src={item.img}
                             alt={item.name}

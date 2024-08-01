@@ -55,6 +55,7 @@ export default function Navbar() {
             {
                 tabs.map(tab => 
                     <Link 
+                        key={tab.name}
                         href={tab.href} 
                         target={tab.target}
                         className={classNames(tab.current ? "text-black italic" : "text-zinc-500",
