@@ -1,9 +1,19 @@
-import Image from "next/image";
+import { Hello, Goat } from "@/components/Animations";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello world
-    </main>
-  );
+	return (
+		<div>
+			{/* HOME */}
+			<div className="flex flex-row h-[100vh] bg-red-100">
+				<Hello />
+				<Goat />
+			</div>
+
+			{/* ABOUT */}
+			<div className="flex flex-row h-[100vh] bg-[#6B766E]">
+				<Hello />
+				<Goat />
+			</div>
+		</div>
+	);
 }

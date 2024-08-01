@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
     return (
-        <div className="flex flex-col justify-start p-32 min-h-full font-cormorant">
+        <div className="flex flex-col justify-start p-32 min-h-full font-cormorant tracking-wide">
             <h1 className="text-4xl">Hi there!</h1>
             <p className="pt-10 text-base">Unfortunately, we could not find the page you were looking for.</p>
             <Link href="/">

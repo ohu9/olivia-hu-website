@@ -25,6 +25,7 @@ const config: Config = {
       ebg: ['EB Garamond', 'serif'],
       cormorant: ['Cormorant Garamond', 'serif'],
       inter: ['Inter', 'sans-serif'],
+      playfair: ['Playfair Display', 'serif'],
     },
   },
   plugins: [],

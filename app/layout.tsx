@@ -23,7 +23,7 @@ export default function RootLayout({
 			<body className='relative font-ebg'>
 				<Navbar />
 				<Sidebar />
-				<main className="mx-auto lg:mx-32 lg:my-10">
+				<main className="mx-auto my-10">
 					{children}
 				</main>
 				{/* <Footer /> */}
