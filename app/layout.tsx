@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
 import {EB_Garamond, Cormorant, Playfair_Display, Inter} from 'next/font/google'
+import classNames from "classnames";
 
 export const metadata: Metadata = {
 	title: "olivia hu",
@@ -42,14 +43,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${inter.variable} ${eb_garamond.variable} ${cormorant.variable} ${playfair.variable}`}>
+		<html lang="en" className={classNames("scroll-smooth", `${inter.variable} ${eb_garamond.variable} ${cormorant.variable} ${playfair.variable}`)}>
 			<head>
 				<link rel="icon" href="/logo.png" />
 			</head>
-			<body className='relative font-ebg'>
+			<body className='relative font-cormorant'>
 				<Navbar />
-				<Sidebar />
-				<main className="mx-auto my-10">
+				{/* <Sidebar /> */}
+				<main className="">
 					{children}
 				</main>
 				{/* <Footer /> */}

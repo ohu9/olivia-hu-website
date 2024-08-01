@@ -29,6 +29,8 @@ customize tailwind variables in tailwind.config.ts
 
 google fonts import
     # update: refer to this link https://blog.logrocket.com/how-to-use-custom-fonts-tailwind-css/ 
+    - import fonts in global.css
+    - configure custom fonts in tailwind.config.ts
     # next.js docs: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css
     # variable fonts: https://fonts.google.com/variablefonts
     - display:'swap' indicates to load page immediately with fall-back fonts, if needed
@@ -36,7 +38,6 @@ google fonts import
     custom variables:
     - cormorant, ebg, inter
 
-
-
+useScrollPosition tutorial: https://www.skillthrive.com/posts/change-nav-on-scroll
 
 
