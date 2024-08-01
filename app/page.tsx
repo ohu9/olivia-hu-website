@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<div>
 			{/* HOME */}
-			<div className="flex flex-row h-[100vh] bg-red-100">
+			<div className="flex flex-row h-[100vh]">
 				<Hello />
 				<Goat />
 			</div>

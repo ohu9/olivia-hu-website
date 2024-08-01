@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
     {
-        name: 'olivia hu',
+        name: 'home',
         href: '/',
         current: false,
     },
@@ -19,13 +19,13 @@ const tabs = [
         current: false,
     },
     {
-        name: 'projects',
-        href: '/projects',
+        name: 'experience',
+        href: '/experience',
         current: false,
     },
     {
-        name: 'experience',
-        href: '/experience',
+        name: 'portfolio',
+        href: '/portfolio',
         current: false,
     },
     {
@@ -51,25 +51,15 @@ export default function Navbar() {
     <>
         <MobileMenu/>
         <nav className='hidden p-6 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
-            <Link href="/" className="flex items-center gap-5">
-                <Image 
-                    src="/logo.png" 
-                    width={400} 
-                    height={400} 
-                    alt='home' 
-                    className='w-7 h-7 ml-3 mt-2 hover:cursor-pointer'/>
-                <p className="px-2 mt-1 text-black font-semibold tracking-[.2rem]">olivia hu</p>
-            </Link>
-            <div className="flex gap-6 mr-12">
-                
+            <div className="flex gap-6 mr-12"> 
             {
-                tabs.slice(1).map(tab => 
+                tabs.map(tab => 
                     <Link 
                         href={tab.href} 
                         target={tab.target}
-                        className={classNames(tab.current ? "text-black font-bold" : "text-zinc-500",
-                                    "px-2 hover:text-black hover:font-450 tracking-[.2rem] transition-all duration-150")}>
-                        {tab.name}
+                        className={classNames(tab.current ? "text-black italic" : "text-zinc-500",
+                                    "font-playfair transition-all duration-150")}>
+                        {tab.name.toUpperCase()}
                     </Link>
                 )
             }
