@@ -14,13 +14,13 @@ const tabs = [
         name: 'home',
         href: '/#home',
         current: false,
-        range: [0,1000],
+        range: [0,945],
     },
     {
         name: 'about',
         href: '/#about',
         current: false,
-        range: [1000,2000],
+        range: [945,1905],
     },
     // {
     //     name: 'experience',
@@ -31,13 +31,13 @@ const tabs = [
         name: 'portfolio',
         href: '/#portfolio',
         current: false,
-        range: [2000,3000],
+        range: [1905,2905],
     },
     {
         name: 'contact',
         href: '/#contact',
         current: false,
-        range: [3000,4000],
+        range: [2905,4000],
     },
     // {
     //     name: 'resume',
@@ -73,9 +73,10 @@ export default function Navbar() {
                             href={tab.href} 
                             // target={tab.target}
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
-                                scrollPosition >= 1000 && scrollPosition < 2000 && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
-                                scrollPosition >= 1000 && scrollPosition < 2000 && tab.name == 'about' && "text-white",
-                                "text-2xl tracking-wide font-playfair leading-none hover:text-zinc-700 transition duration-100")}>
+                                scrollPosition >= 945 && scrollPosition < 1905 && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
+                                scrollPosition >= 945 && scrollPosition < 1905 && tab.name == 'about' && "text-white",
+                                (scrollPosition < 945 || scrollPosition >= 1905) && "hover:text-zinc-700",
+                                "text-2xl tracking-wide font-playfair leading-none transition duration-100")}>
                             {tab.name.toUpperCase()}
                         </Link>
                     </motion.div>

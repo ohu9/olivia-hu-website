@@ -19,11 +19,17 @@ export function Home() {
     return (
     <>
         <motion.div 
-            initial={{ y:-100, opacity:0 }} 
+            initial={{ y:-80, opacity:0 }} 
             animate={{ y:0, opacity:1 }}
             transition={{ duration: .8, delay:.2 }}
             className="absolute z-10 w-[43vw] h-52 mt-[40vh] ml-24 bg-white">
-            <p className="font-playfair text-black text-[96pt] text-center">OLIVIA HU</p>
+            <Image
+                    src='/olivia_hu.png' 
+                    alt='OLIVIA HU'
+                    width='1500'
+                    height='1500'
+                    className="object-cover" />
+            {/* <p className="font-playfair text-black text-[96pt] text-center">OLIVIA HU</p> */}
         </motion.div>
         <div className="flex absolute right-0 top-0">
             <motion.div
@@ -42,7 +48,7 @@ export function Home() {
             <div className="w-[50vw] h-[820px] bg-[#EEE9E2] absolute z-0 right-0  my-[45px] mr-16" />
         </div>
 
-        <div className="absolute ml-[30vw] mt-[66vh] text-right flex flex-col gap-2 font-inter">
+        <div className="absolute ml-[30vw] mt-[66vh] text-right flex flex-col gap-2 font-cormorant text-lg">
             <motion.div
                 initial={{ opacity:0, x:20 }} 
                 animate={{ opacity:1, x:0 }}
