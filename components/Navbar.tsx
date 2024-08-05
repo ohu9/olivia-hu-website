@@ -95,11 +95,11 @@ const MobileMenu = () => {
     return (
         <Disclosure as="div">
             <div className="md:hidden fixed flex justify-between items-center z-20 mt-10 mx-4">
-                <DisclosureButton className={classNames(scrollPosition > 945 && scrollPosition <= 1945? "text-zinc-50" : "",
-                            "group inline-flex items-center justify-center p-2 text-zinc-500")}>
+                <DisclosureButton className={classNames(scrollPosition > 945 && scrollPosition <= 1945? "text-zinc-50" : "text-zinc-500",
+                            "group inline-flex items-center justify-center p-2")}>
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
-                    <Bars3Icon aria-hidden="true" className="block h-6 w-6 stroke-[2px] group-data-[open]:hidden group-data-[open]:text-zinc-500" />
+                    <Bars3Icon aria-hidden="true" className="block h-6 w-6 stroke-[2px] group-data-[open]:hidden" />
                     <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 stroke-[2px] group-data-[open]:block group-data-[open]:text-zinc-500" />
                 </DisclosureButton>
             </div>
