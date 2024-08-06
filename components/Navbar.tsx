@@ -58,7 +58,7 @@ export default function Navbar() {
     return (
     <>
         <MobileMenu/>
-        <nav className={classNames('hidden w-36 md:fixed z-20 mt-12 ml-10 md:flex md:flex-row md:gap-5 md:items-center md:justify-between',
+        <nav className={classNames('hidden w-36 lg:fixed z-20 mt-12 ml-10 lg:flex lg:flex-row lg:gap-5 lg:items-center lg:justify-between',
                     scrollPosition >= tabs[2].range[0]+70 && scrollPosition < tabs[2].range[1]-70 && 'bg-zinc-50 opacity-75'
         )}>
             <div className="flex flex-col mr-12"> 
@@ -96,8 +96,8 @@ const MobileMenu = () => {
 
     return (
         <Disclosure as="div">
-            <div className="md:hidden fixed flex justify-between items-center z-20 mt-10 mx-4">
-                <DisclosureButton className={classNames(scrollPosition > 945 && scrollPosition <= 1945? "text-zinc-50" : "text-zinc-500",
+            <div className="lg:hidden fixed flex justify-between items-center z-30 mt-10 mx-4">
+                <DisclosureButton className={classNames(scrollPosition > tabs[1].range[0] && scrollPosition <= tabs[1].range[1]? "text-zinc-50" : "text-zinc-500",
                             "group inline-flex items-center justify-center p-2")}>
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
@@ -105,7 +105,7 @@ const MobileMenu = () => {
                     <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 stroke-[2px] group-data-[open]:block group-data-[open]:text-zinc-500" />
                 </DisclosureButton>
             </div>
-            <DisclosurePanel as="div" transition className="md:hidden flex flex-col gap-1 fixed left-0 z-20 inset-y-0 pl-8 pr-20 py-24 bg-white shadow-lg transition data-[closed]:-translate-x-5 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in">
+            <DisclosurePanel as="div" transition className="lg:hidden flex flex-col gap-1 fixed left-0 z-20 inset-y-0 pl-8 pr-20 py-24 bg-white shadow-lg transition data-[closed]:-translate-x-5 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in">
             {
                 tabs.map((tab, i) => 
                     <motion.div

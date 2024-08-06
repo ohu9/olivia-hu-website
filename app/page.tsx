@@ -1,10 +1,9 @@
 import { Home } from "@/components/Home";
 import Portfolio from "@/components/Portfolio";
-import { tabs } from "@/components/Navbar";
 
 export default function Page() {
 	return (
-		<div className="snap-y snap-mandatory overscroll-y-scroll h-[100vh]">
+		<div className="snap-y snap-mandatory overscroll-y-scroll h-[100vh] overscroll-x-none">
 			{/* HOME */}
 			<section id='home' className="snap-start" />
 			<div className="flex flex-row h-[1000px] bg-[#F4F4F5]">
