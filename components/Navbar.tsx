@@ -59,7 +59,7 @@ export default function Navbar() {
     <>
         <MobileMenu/>
         <nav className={classNames('hidden w-36 md:fixed z-20 mt-12 ml-10 md:flex md:flex-row md:gap-5 md:items-center md:justify-between',
-                    scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && 'bg-zinc-50 opacity-75'
+                    scrollPosition >= tabs[2].range[0]+70 && scrollPosition < tabs[2].range[1]-70 && 'bg-zinc-50 opacity-75'
         )}>
             <div className="flex flex-col mr-12"> 
             {
