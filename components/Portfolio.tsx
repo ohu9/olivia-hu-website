@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const items = [
     {
@@ -41,8 +42,16 @@ const items = [
 ]
 export default function Portfolio() {
     return (
-        <div>
-
+        <div className="w-full h-full mt-10 bg-sky-100">
+            {items.map((item,i) => 
+                <motion.div key={item.name} className="w-40 h-64 bg-sky-200"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .5+(.3*i)}}>
+                    {item.name}
+                </motion.div>
+            )}
         </div>
     )
 }

@@ -31,13 +31,13 @@ const tabs = [
         name: 'portfolio',
         href: '/#portfolio',
         current: false,
-        range: [1905,2905],
+        range: [1905,3905],
     },
     {
         name: 'contact',
         href: '/#contact',
         current: false,
-        range: [2905,4000],
+        range: [3905,5000],
     },
     // {
     //     name: 'resume',
@@ -58,7 +58,7 @@ export default function Navbar() {
     return (
     <>
         <MobileMenu/>
-        <nav className='hidden md:fixed mt-12 ml-10 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
+        <nav className='hidden md:fixed z-20 mt-12 ml-10 md:flex md:flex-row md:gap-5 md:items-center md:justify-between'>
             <div className="flex flex-col mr-12"> 
             {
                 tabs.map((tab,i) => 
@@ -73,9 +73,9 @@ export default function Navbar() {
                             href={tab.href} 
                             // target={tab.target}
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
-                                scrollPosition >= 945 && scrollPosition < 1905 && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
-                                scrollPosition >= 945 && scrollPosition < 1905 && tab.name == 'about' && "text-white",
-                                (scrollPosition < 945 || scrollPosition >= 1905) && "hover:text-zinc-700",
+                                scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
+                                scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name == 'about' && "text-white",
+                                (scrollPosition < tabs[1].range[0] || scrollPosition >= tabs[1].range[1]) && "hover:text-zinc-700",
                                 "text-2xl tracking-wide font-playfair leading-none transition duration-100")}>
                             {tab.name.toUpperCase()}
                         </Link>
@@ -103,7 +103,7 @@ const MobileMenu = () => {
                     <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 stroke-[2px] group-data-[open]:block group-data-[open]:text-zinc-500" />
                 </DisclosureButton>
             </div>
-            <DisclosurePanel as="div" transition className="md:hidden flex flex-col gap-1 fixed left-0 z-10 inset-y-0 pl-8 pr-20 py-24 bg-white shadow-lg transition data-[closed]:-translate-x-5 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in">
+            <DisclosurePanel as="div" transition className="md:hidden flex flex-col gap-1 fixed left-0 z-20 inset-y-0 pl-8 pr-20 py-24 bg-white shadow-lg transition data-[closed]:-translate-x-5 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in">
             {
                 tabs.map((tab, i) => 
                     <motion.div

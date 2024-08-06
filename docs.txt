@@ -17,6 +17,11 @@ routing/layout
 server/client side rendering
 - client-side components in ./app/components folder
 
+navbar
+- height of each "page" determined in app/page.tsx styles – default 1000px per section
+- specify style changes in navbar via 'range' attribute in components/Navbar.tsx const tabs (slightly offset)
+# useScrollPosition tutorial: https://www.skillthrive.com/posts/change-nav-on-scroll
+
 
 STYLING //////////////////////////////////////////////////////////////
 
@@ -38,6 +43,7 @@ google fonts import
     custom variables:
     - cormorant, ebg, inter
 
-useScrollPosition tutorial: https://www.skillthrive.com/posts/change-nav-on-scroll
 
-
+framer motion
+# https://www.framer.com/motion/
+- npm install framer-motion
