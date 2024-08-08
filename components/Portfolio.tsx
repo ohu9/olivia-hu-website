@@ -218,8 +218,78 @@ export function Portfolio() {
 
 export function MobilePortfolio() {
     return (
-        <div className="block lg:hidden">
-            mobile portfolio
+        <div className="block lg:hidden mx-10">
+            {/* ROCKET DRONES */}
+            <div className="flex flex-col mt-10 h-auto">
+                <Image
+                    src='/projects/rd-drones.jpg'
+                    alt='rocket drones image'
+                    width='800'
+                    height='800'
+                    className='object-contain w-full'/>
+                <div className="bg-black px-16 text-white font-ebg pb-20">
+                    <p className="font-playfair text-4xl font-bold tracking-[.4rem]">ROCKET DRONES</p>
+                    <p className="font-inter font-bold tracking-[.2rem] my-5">FULL STACK DEVELOPMENT INTERN</p>
+                    <p className="italic tracking-wide opacity-70">Winter – Summer 2024</p>
+                    <ul className="mt-6 list-disc">
+                        <li className="ml-8 mt-3">Designed and implemented client portal interface using Figma, React, Next.js, TailwindCSS</li>
+                        <li className="ml-8 mt-3">Built back-end framework using Supabase and handled database queries through Next.js</li>
+                        <li className="ml-8 mt-3">Worked with hardware and marketing teams to ensure software compatibility and meet user requirements</li>
+                    </ul>
+                    <div className="mt-10">
+                        <LinkButton color="white" href='https://rocketdrones.com/' label='WEBSITE'/>
+                    </div>
+                </div>
+            </div>
+
+            {/* AGORA */}
+            <div className="flex flex-col mt-10 w-full h-auto bg-[#E5E9E7] text-[#073700] font-ebg px-16 pt-20 pb-12">
+                <Image
+                    src='/projects/agora-booklets.jpg'
+                    alt='agora image'
+                    width='800'
+                    height='800'
+                    className='object-cover w-full sm:h-72 h-56'/>
+
+                <span className="inline mt-12 font-playfair text-4xl font-bold tracking-[.4rem]">AGORA
+                    <p className="inline ml-4 tracking-wider font-normal font-inter text-xs">| &nbsp;&nbsp;a student literary journal at Georgia Tech</p>
+                </span>
+                
+                {/* WEB TEAM LEAD */}
+                <div>
+                    <p className="font-inter font-bold tracking-[.4rem] mt-8">WEB TEAM LEAD</p>
+                    <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
+                    <ul className="list-disc">
+                        <li className="ml-8 mt-[2px]">Designed and prototyped website for literary journal, Agora, using Figma; illustrated logo using Procreate</li>
+                        <li className="ml-8 mt-[2px]">Coded website using JSX, React, and Next.js; implemented responsive interface for mobile screens, improved SEO</li>
+                        <li className="ml-8 mt-[2px]">Used Firebase database to store website images and content; site renders dynamic pages using database queries</li>
+                        <li className="ml-8 mt-[2px]">Deployed site with custom domain, SSL certificate authentication, and domain privacy protection</li>
+                        <li className="ml-8 mt-[2px]">Employ Agile development to plan sprint schedule, run scrum meetings, delegate tasks</li>
+                    </ul>
+
+                    {/* buttons */}
+                    <div className="flex gap-3 mt-8">
+                        <LinkButton color="black" href='https://www.figma.com/proto/oM6AEdnnZBCOon4nI1K8lq/Agora-Website?node-id=7-2&t=NWZlvQl64dgdHB48-1' label='FIGMA'/>
+                        <LinkButton color="black" href='https://github.com/GTagora/AgoraFrontend' label='GITHUB'/>
+                    </div>
+                </div>
+
+                {/* CO FOUNDER.. */}
+                <div>
+                    <p className="font-inter font-bold tracking-[.4rem] mt-16">CO-FOUNDER & EDITOR-IN-CHIEF</p>
+                    <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
+                    <ul className="list-disc">
+                        <li className="ml-8 mt-[2px]">Ideated and established Agora, a student-run Christian journal at Georgia Tech</li>
+                        <li className="ml-8 mt-[2px]">Recruited members, planned meetings, ran workshops, lead discussions, oversaw communication logistics</li>
+                        <li className="ml-8 mt-[2px]">Direct website development, graphic design, and creative direction of journal’s blog and print publications</li>
+                    </ul>
+                </div>
+                <div className="my-8">
+                    <LinkButton color="black" href='https://www.gtagora.com/' label='WEBSITE'/>
+                </div>
+            </div>
+
+            {/* OTHER PROJECTS */}
         </div>
     )
 }
