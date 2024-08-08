@@ -24,8 +24,8 @@ const links = [
 
 export default function Contact() {
     return (
-        <div className={classNames("flex flex-col-reverse text-[#403830]",
-                                    "md:flex-row gap-20 w-full h-[600px] mt-[250px]",
+        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[300px] mx-16 gap-12",
+                                    "md:flex-row md:gap-20 w-full h-[600px] md:mt-[300px] md:mx-0",
         )}>
             <motion.img 
                 initial={{ opacity: 0, y:15 }}
@@ -37,14 +37,14 @@ export default function Contact() {
                 alt='rocket drones image'
                 width='800'
                 height='800'
-                className='object-contain w-full lg:ml-32 lg:w-[40%]'/>
+                className='object-cover md:min-h-[80%] w-full lg:ml-32 md:w-[40%] '/>
             <div>
                 <motion.div 
                     initial={{ opacity: 0, x:15 }}
                     whileInView={{ opacity: 1, x:0 }}
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .4}}
-                    className="mt-5 font-playfair tracking-[.8rem] text-[80pt]">
+                    className="mt-5 font-playfair lg:tracking-[.8rem] xl:text-[80pt] lg:text-[65pt] tracking-[.4rem] text-[50pt]">
                     contact
                 </motion.div>
                 <motion.div 
@@ -52,10 +52,10 @@ export default function Contact() {
                     whileInView={{ opacity: 1, x:0 }}
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .7}}
-                    className="mt-5 ml-4 font-ebg tracking-[.1rem]">
+                    className="mt-0 ml-2 md:mt-5 md:ml-4 font-ebg tracking-[.1rem]">
                     Let&apos;s get in touch &mdash; I'd love to talk more.
                 </motion.div>
-                <div className="flex flex-col gap-2 my-6">
+                <div className="flex flex-col gap-2 mt-12">
                     {links.map((link,i) => <>
                         <motion.div
                             key={link.label}

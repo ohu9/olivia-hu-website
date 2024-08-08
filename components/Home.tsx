@@ -57,9 +57,11 @@ export function Home() {
                 </motion.div>
             </div>
         </div>
-        <div className="flex md:flex-row flex-col md:items-auto md:absolute md:right-0 md:top-0 md:mt-0 mt-10 ">
+        <div className={classNames("flex items-center flex-col mt-16",
+                                   "md:flex-row md:items-start md:absolute md:right-0 md:top-0 md:mt-0"
+        )}>
             <motion.div
-                className="lg:w-[53vw] md:w-[70vw] z-10 h-48"
+                className="lg:w-[53vw] md:w-[70vw] z-10 w-80"
                 initial={{ y:-50, opacity:0 }} 
                 animate={{ y:0, opacity:1 }}
                 whileHover={{ x: -6, y: -10 }}
@@ -78,7 +80,7 @@ export function Home() {
                 transition={{ duration: 1 }}
                 className="hidden md:block md:absolute md:z-0 md:right-0 md:w-[50vw] md:h-[820px] md:my-[45px] md:mr-16 mt-24 bg-[#EEE9E2]" />
 
-            <div className="md:hidden absolute z-0 w-full h-96 mt-16 bg-[#EEE9E2]" />
+            <div className="md:hidden absolute z-0 w-72 h-72 mt-10 rounded-[500px] bg-[#EEE9E2]" />
         </div>
     </div>)
 }
