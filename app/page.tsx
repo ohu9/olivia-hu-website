@@ -1,5 +1,5 @@
 import { Home } from "@/components/Home";
-import Portfolio from "@/components/Portfolio";
+import { Portfolio, MobilePortfolio} from "@/components/Portfolio";
 
 export default function Page() {
 	return (
@@ -18,11 +18,12 @@ export default function Page() {
 
 			{/* PORTOFLIO */}
 			<section id='portfolio' className="snap-start" />
-			<div className="flex flex-col h-[2000px] bg-zinc-50">
+			<div className="flex flex-col h-[3000px] bg-zinc-50">
 				<p className="self-center md:self-end mt-20 md:mt-10 md:mr-[4vw] lg:mr-[7vw] font-playfair tracking-wider lg:text-[90pt] md:text-[65pt] text-[50pt]">
 					PORTFOLIO
 				</p>
 				<Portfolio />
+				<MobilePortfolio />
 			</div>
 
 			{/* CONTACT */}

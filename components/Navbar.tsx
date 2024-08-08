@@ -31,13 +31,13 @@ const tabs = [
         name: 'portfolio',
         href: '/#portfolio',
         current: false,
-        range: [1905,3905],
+        range: [1905,4905],
     },
     {
         name: 'contact',
         href: '/#contact',
         current: false,
-        range: [3905,5000],
+        range: [4905,6000],
     },
     // {
     //     name: 'resume',

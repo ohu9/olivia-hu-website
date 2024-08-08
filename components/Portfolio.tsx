@@ -42,11 +42,11 @@ const items = [
         github: 'https://github.com/ohu9/cs3451'
     },
 ]
-export default function Portfolio() {
+export function Portfolio() {
     return (
-        <>
+        <div className="hidden lg:block">
             {/* ROCKET DRONES */}
-            <div className="flex flex-col lg:flex-row lg:items-end lg:gap-14 w-full h-[60vh] mt-12">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:gap-14 w-full h-[60vh] mt-32">
                 <motion.img 
                     initial={{ opacity: 0, y:15 }}
                     whileInView={{ opacity: 1, y:0 }}
@@ -58,8 +58,8 @@ export default function Portfolio() {
                     width='800'
                     height='800'
                     className='object-contain w-full lg:ml-32 lg:w-[40%]'/>
-                <motion.div className={classNames("xl:w-[70%] lg:w-[60%] h-auto lg:bg-[#673F3F] lg:pl-20 lg:pr-10 lg:py-32",
-                                        "bg-black py-20 px-16 text-white font-ebg"
+                <motion.div className={classNames("xl:w-[70%] lg:w-[60%] h-auto lg:bg-[#673F3F] lg:pl-20 lg:pr-10 xl:py-32 py-20",
+                                        "bg-black px-16 text-white font-ebg"
                 )}
                     initial={{ opacity: 0, y:15 }}
                     whileInView={{ opacity: 1, y:0 }}
@@ -80,15 +80,14 @@ export default function Portfolio() {
                         viewport={{ once: true }}
                         transition={{ duration: .8, delay: .8}}
                         className="mt-10">
-                        <LinkButton color="white" bg="[#673F3F]" href='https://rocketdrones.com/' label='WEBSITE'/>
+                        <LinkButton color="white" href='https://rocketdrones.com/' label='WEBSITE'/>
                     </motion.div>
                 </motion.div>
             </div>
 
             {/* AGORA */}
-            <div className="flex flex-col xl:flex-row lg:gap-12 w-full h-auto lg:mt-32 xl:px-52 lg:px-32 md:mt-96 mt-80">
-                <motion.div className={classNames("h-full bg-[#E5E9E7] lg:px-32 lg:pt-28",
-                                        "py-20 px-16 text-[#073700] font-ebg"
+            <div className="flex flex-col justify-center xl:flex-row lg:gap-12 w-full lg:mt-32 xl:px-52 lg:px-32 md:mt-80 mt-72">
+                <motion.div className={classNames("h-auto bg-[#E5E9E7] lg:px-32 px-16 py-20 text-[#073700] font-ebg flex flex-col justify-center"
                 )}
                     initial={{ opacity: 0, y:15 }}
                     whileInView={{ opacity: 1, y:0 }}
@@ -115,20 +114,20 @@ export default function Portfolio() {
                         </ul>
 
                         {/* buttons */}
-                        <div className="flex gap-3 my-10">
+                        <div className="flex gap-3 my-8">
                             <motion.div 
                                 initial={{ opacity: 0, x:15 }}
                                 whileInView={{ opacity: 1, x:0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: .8, delay: .8}}>
-                                <LinkButton color="[#073700]" bg="[#E5E9E7]" href='https://www.figma.com/proto/oM6AEdnnZBCOon4nI1K8lq/Agora-Website?node-id=7-2&t=NWZlvQl64dgdHB48-1' label='FIGMA'/>
+                                <LinkButton color="black" href='https://www.figma.com/proto/oM6AEdnnZBCOon4nI1K8lq/Agora-Website?node-id=7-2&t=NWZlvQl64dgdHB48-1' label='FIGMA'/>
                             </motion.div>
                             <motion.div 
                                 initial={{ opacity: 0, x:15 }}
                                 whileInView={{ opacity: 1, x:0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: .8, delay: .9}}>
-                                <LinkButton color="[#073700]" bg="[#E5E9E7]" href='https://github.com/GTagora/AgoraFrontend' label='GITHUB'/>
+                                <LinkButton color="black" href='https://github.com/GTagora/AgoraFrontend' label='GITHUB'/>
                             </motion.div>
                         </div>
                     </motion.div>
@@ -152,13 +151,13 @@ export default function Portfolio() {
                         whileInView={{ opacity: 1, x:0 }}
                         viewport={{ once: true }}
                         transition={{ duration: .8, delay: .8}}
-                        className="mt-10">
-                        <LinkButton color="[#073700]" bg="[#E5E9E7]" href='https://www.gtagora.com/' label='WEBSITE'/>
+                        className="mt-8">
+                        <LinkButton color="black" href='https://www.gtagora.com/' label='WEBSITE'/>
                     </motion.div>
                 </motion.div>
 
                 {/* image column */}
-                <div className="flex xl:flex-col gap-4 justify-between w-[25%] lg:h-[95vh] bg-red-100">
+                <div className="hidden xl:flex xl:flex-col gap-4 justify-between w-[25%] lg:h-[95vh]">
                     <motion.img 
                         initial={{ opacity: 0, y:15 }}
                         whileInView={{ opacity: 1, y:0 }}
@@ -186,7 +185,7 @@ export default function Portfolio() {
 
             {/* OTHER PROJECTS */}
 
-        </>
+        </div>
         // <div className="w-3/4 mt-12 mx-auto md:grid xl:grid-cols-3 md:grid-cols-2 md:gap-7 space-y-5 md:space-y-0">
 
         //     {/* AGORA */}
@@ -217,13 +216,23 @@ export default function Portfolio() {
     )
 }
 
-const LinkButton = ( { color, bg, href, label }:{ color:string, bg:string, href:string, label:string} ) => {
+export function MobilePortfolio() {
+    return (
+        <div className="block lg:hidden">
+            mobile portfolio
+        </div>
+    )
+}
+
+const LinkButton = ( { color, href, label }:{ color:string, href:string, label:string} ) => {
     return (
         <Link 
             href={href}
             target='_blank'
-            className={classNames(`text-${color} border-${color} hover:bg-${color} hover:text-${bg}`,
-                        "border-2 rounded-2xl px-4 py-2 font-inter text-xs tracking-widest",
+            className={classNames(
+                        color == 'white' ? "text-white border-white hover:bg-white hover:text-black" 
+                            : "text-neutral-600 border-neutral-600 hover:bg-neutral-600 hover:text-white",
+                        "border-2 rounded-2xl px-5 py-2 font-inter text-xs tracking-widest",
                         "transition-all duration-100")}>
             {label}
         </Link>
