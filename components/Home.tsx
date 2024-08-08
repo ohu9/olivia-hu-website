@@ -1,6 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import Image from "next/image";
+import classNames from "classnames";
 
 export function Hello() {
     return (
@@ -56,9 +57,9 @@ export function Home() {
                 </motion.div>
             </div>
         </div>
-        <div className="flex md:absolute md:right-0 md:top-0">
+        <div className="flex md:flex-row flex-col md:items-auto md:absolute md:right-0 md:top-0 md:mt-0 mt-10 ">
             <motion.div
-                className="lg:w-[53vw] w-[70vw] md:z-10"
+                className="lg:w-[53vw] md:w-[70vw] z-10 h-48"
                 initial={{ y:-50, opacity:0 }} 
                 animate={{ y:0, opacity:1 }}
                 whileHover={{ x: -6, y: -10 }}
@@ -68,7 +69,7 @@ export function Home() {
                     alt='goat drawing'
                     width='1500'
                     height='1500'
-                    className="object-cover md:right-0 mt-16" />
+                    className="object-cover md:right-0 md:mt-16 mt-8" />
             </motion.div>
             {/* tan box */}
             <motion.div 
@@ -76,6 +77,8 @@ export function Home() {
                 animate={{ opacity:1 }}
                 transition={{ duration: 1 }}
                 className="hidden md:block md:absolute md:z-0 md:right-0 md:w-[50vw] md:h-[820px] md:my-[45px] md:mr-16 mt-24 bg-[#EEE9E2]" />
+
+            <div className="md:hidden absolute z-0 w-full h-96 mt-16 bg-[#EEE9E2]" />
         </div>
     </div>)
 }
