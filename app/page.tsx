@@ -1,5 +1,6 @@
 import { Home } from "@/components/Home";
 import { Portfolio, MobilePortfolio} from "@/components/Portfolio";
+import Contact from "@/components/Contact";
 
 export default function Page() {
 	return (
@@ -29,7 +30,7 @@ export default function Page() {
 			{/* CONTACT */}
 			<section id='contact' className="snap-start" />
 			<div className="flex flex-row h-[1000px] bg-[#EEE9E2]">
-				
+				<Contact />
 			</div>
 		</div>
 	);

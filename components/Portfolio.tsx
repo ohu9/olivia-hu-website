@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { LinkButton } from "./Buttons";
 import classNames from "classnames";
 
 const items = [
@@ -69,8 +69,8 @@ export function Portfolio() {
                     <p className="font-inter font-bold tracking-[.4rem] my-5">FULL STACK DEVELOPMENT INTERN</p>
                     <p className="italic tracking-wide opacity-70">Winter – Summer 2024</p>
                     <ul className="mt-10 list-disc">
-                        <li className="ml-8 mt-3">Designed and implemented client portal interface using Figma, React, Next.js, TailwindCSS</li>
-                        <li className="ml-8 mt-3">Built back-end framework using Supabase and handled database queries through Next.js</li>
+                        <li className="ml-8 mt-3">Designed and implemented client portal interface using <b>Figma</b>, <b>React</b>, <b>Next.js</b>, <b>TailwindCSS</b></li>
+                        <li className="ml-8 mt-3">Built back-end framework using <b>Supabase</b> and handled database queries through <b>Next.js</b></li>
                         <li className="ml-8 mt-3">Worked with hardware and marketing teams to ensure software compatibility and meet user requirements</li>
                     </ul>
 
@@ -106,11 +106,11 @@ export function Portfolio() {
                         <p className="font-inter font-bold tracking-[.4rem] mt-8">WEB TEAM LEAD</p>
                         <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
                         <ul className="list-disc">
-                            <li className="ml-8 mt-[2px]">Designed and prototyped website for literary journal, Agora, using Figma; illustrated logo using Procreate</li>
-                            <li className="ml-8 mt-[2px]">Coded website using JSX, React, and Next.js; implemented responsive interface for mobile screens, improved SEO</li>
-                            <li className="ml-8 mt-[2px]">Used Firebase database to store website images and content; site renders dynamic pages using database queries</li>
+                            <li className="ml-8 mt-[2px]">Designed and prototyped website for literary journal, <i>Agora</i>, using <b>Figma</b>; illustrated logo using <b>Procreate</b></li>
+                            <li className="ml-8 mt-[2px]">Coded website using <b>JSX</b>, <b>React</b>, and <b>Next.js</b>; implemented responsive interface for mobile screens, improved SEO</li>
+                            <li className="ml-8 mt-[2px]">Used <b>Firebase</b> database to store website images and content; site renders dynamic pages using database queries</li>
                             <li className="ml-8 mt-[2px]">Deployed site with custom domain, SSL certificate authentication, and domain privacy protection</li>
-                            <li className="ml-8 mt-[2px]">Employ Agile development to plan sprint schedule, run scrum meetings, delegate tasks</li>
+                            <li className="ml-8 mt-[2px]">Employ <b>Agile development</b> to plan sprint schedule, run scrum meetings, delegate tasks</li>
                         </ul>
 
                         {/* buttons */}
@@ -119,14 +119,14 @@ export function Portfolio() {
                                 initial={{ opacity: 0, x:15 }}
                                 whileInView={{ opacity: 1, x:0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: .8, delay: .8}}>
+                                transition={{ duration: .8, delay: .5}}>
                                 <LinkButton color="black" href='https://www.figma.com/proto/oM6AEdnnZBCOon4nI1K8lq/Agora-Website?node-id=7-2&t=NWZlvQl64dgdHB48-1' label='FIGMA'/>
                             </motion.div>
                             <motion.div 
                                 initial={{ opacity: 0, x:15 }}
                                 whileInView={{ opacity: 1, x:0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: .8, delay: .9}}>
+                                transition={{ duration: .8, delay: .6}}>
                                 <LinkButton color="black" href='https://github.com/GTagora/AgoraFrontend' label='GITHUB'/>
                             </motion.div>
                         </div>
@@ -137,20 +137,21 @@ export function Portfolio() {
                         initial={{ opacity: 0, y:15 }}
                         whileInView={{ opacity: 1, y:0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: .8, delay: .7}}>
+                        transition={{ duration: .8, delay: .5}}>
                         <p className="font-inter font-bold tracking-[.4rem] mt-16">CO-FOUNDER & EDITOR-IN-CHIEF</p>
                         <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
                         <ul className="list-disc">
-                            <li className="ml-8 mt-[2px]">Ideated and established Agora, a student-run Christian journal at Georgia Tech</li>
+                            <li className="ml-8 mt-[2px]">Ideated and established <i>Agora</i>, a student-run Christian journal at Georgia Tech</li>
                             <li className="ml-8 mt-[2px]">Recruited members, planned meetings, ran workshops, lead discussions, oversaw communication logistics</li>
                             <li className="ml-8 mt-[2px]">Direct website development, graphic design, and creative direction of journal’s blog and print publications</li>
+                            <li className="ml-8 mt-[2px]">Design and create print layout using <b>Adobe InDesign</b></li>
                         </ul>
                     </motion.div>
                     <motion.div 
                         initial={{ opacity: 0, x:15 }}
                         whileInView={{ opacity: 1, x:0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: .8, delay: .8}}
+                        transition={{ duration: .8, delay: .5}}
                         className="mt-8">
                         <LinkButton color="black" href='https://www.gtagora.com/' label='WEBSITE'/>
                     </motion.div>
@@ -232,8 +233,8 @@ export function MobilePortfolio() {
                     <p className="font-inter font-bold tracking-[.2rem] my-5">FULL STACK DEVELOPMENT INTERN</p>
                     <p className="italic tracking-wide opacity-70">Winter – Summer 2024</p>
                     <ul className="mt-6 list-disc">
-                        <li className="ml-8 mt-3">Designed and implemented client portal interface using Figma, React, Next.js, TailwindCSS</li>
-                        <li className="ml-8 mt-3">Built back-end framework using Supabase and handled database queries through Next.js</li>
+                        <li className="ml-8 mt-3">Designed and implemented client portal interface using <b>Figma</b>, <b>React</b>, <b>Next.js</b>, <b>TailwindCSS</b></li>
+                        <li className="ml-8 mt-3">Built back-end framework using <b>Supabase</b> and handled database queries through <b>Next.js</b></li>
                         <li className="ml-8 mt-3">Worked with hardware and marketing teams to ensure software compatibility and meet user requirements</li>
                     </ul>
                     <div className="mt-10">
@@ -257,14 +258,14 @@ export function MobilePortfolio() {
                 
                 {/* WEB TEAM LEAD */}
                 <div>
-                    <p className="font-inter font-bold tracking-[.4rem] mt-8">WEB TEAM LEAD</p>
+                    <p className="font-inter font-bold tracking-[.2rem] mt-8">WEB TEAM LEAD</p>
                     <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
                     <ul className="list-disc">
-                        <li className="ml-8 mt-[2px]">Designed and prototyped website for literary journal, Agora, using Figma; illustrated logo using Procreate</li>
-                        <li className="ml-8 mt-[2px]">Coded website using JSX, React, and Next.js; implemented responsive interface for mobile screens, improved SEO</li>
-                        <li className="ml-8 mt-[2px]">Used Firebase database to store website images and content; site renders dynamic pages using database queries</li>
+                        <li className="ml-8 mt-[2px]">Designed and prototyped website for literary journal, <i>Agora</i>, using <b>Figma</b>; illustrated logo using <b>Procreate</b></li>
+                        <li className="ml-8 mt-[2px]">Coded website using <b>JSX</b>, <b>React</b>, and <b>Next.js</b>; implemented responsive interface for mobile screens, improved SEO</li>
+                        <li className="ml-8 mt-[2px]">Used <b>Firebase</b> database to store website images and content; site renders dynamic pages using database queries</li>
                         <li className="ml-8 mt-[2px]">Deployed site with custom domain, SSL certificate authentication, and domain privacy protection</li>
-                        <li className="ml-8 mt-[2px]">Employ Agile development to plan sprint schedule, run scrum meetings, delegate tasks</li>
+                        <li className="ml-8 mt-[2px]">Employ <b>Agile development</b> to plan sprint schedule, run scrum meetings, delegate tasks</li>
                     </ul>
 
                     {/* buttons */}
@@ -276,12 +277,13 @@ export function MobilePortfolio() {
 
                 {/* CO FOUNDER.. */}
                 <div>
-                    <p className="font-inter font-bold tracking-[.4rem] mt-16">CO-FOUNDER & EDITOR-IN-CHIEF</p>
+                    <p className="font-inter font-bold tracking-[.2rem] mt-16">CO-FOUNDER & EDITOR-IN-CHIEF</p>
                     <p className="italic tracking-wide opacity-70 my-2">Fall 2023 – Present</p>
                     <ul className="list-disc">
-                        <li className="ml-8 mt-[2px]">Ideated and established Agora, a student-run Christian journal at Georgia Tech</li>
+                        <li className="ml-8 mt-[2px]">Ideated and established <i>Agora</i>, a student-run Christian journal at Georgia Tech</li>
                         <li className="ml-8 mt-[2px]">Recruited members, planned meetings, ran workshops, lead discussions, oversaw communication logistics</li>
                         <li className="ml-8 mt-[2px]">Direct website development, graphic design, and creative direction of journal’s blog and print publications</li>
+                        <li className="ml-8 mt-[2px]">Design and create print layout using <b>Adobe InDesign</b></li>
                     </ul>
                 </div>
                 <div className="my-8">
@@ -291,20 +293,5 @@ export function MobilePortfolio() {
 
             {/* OTHER PROJECTS */}
         </div>
-    )
-}
-
-const LinkButton = ( { color, href, label }:{ color:string, href:string, label:string} ) => {
-    return (
-        <Link 
-            href={href}
-            target='_blank'
-            className={classNames(
-                        color == 'white' ? "text-white border-white hover:bg-white hover:text-black" 
-                            : "text-neutral-600 border-neutral-600 hover:bg-neutral-600 hover:text-white",
-                        "border-2 rounded-2xl px-5 py-2 font-inter text-xs tracking-widest",
-                        "transition-all duration-100")}>
-            {label}
-        </Link>
     )
 }
