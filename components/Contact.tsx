@@ -19,25 +19,19 @@ const links = [
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/oliviahhu/",
         img: "/linkedin.png",
+    },
+    {
+        label: "Resume",
+        href: "https://drive.google.com/drive/u/0/folders/1H8a5kiWyaJMFw55MmKis5Dcez20BTHNn",
+        img: "/resume.png",
     }
 ]
 
 export default function Contact() {
     return (
-        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[220px] mx-16 gap-12", 
-                                   "md:flex-row md:gap-20 w-full h-[600px] md:mt-[240px] md:mx-0",
+        <div className={classNames("flex flex-col w-full h-[600px] pt-[120px] mx-16 gap-16 text-[#403830]", 
+                                   "lg:flex-row-reverse xl:mx-[15vw] lg:mr-28 lg:gap-[10vw] lg:mt-[150px] md:items-start",
         )}>
-            <motion.img 
-                initial={{ opacity: 0, y:15 }}
-                whileInView={{ opacity: 1, y:0 }}
-                viewport={{ once: true }}
-                transition={{ duration: .8, delay: .3}}
-
-                src='/seagull.png'
-                alt='seagull image'
-                width='800'
-                height='800'
-                className='object-contain md:min-h-[80%] w-full lg:ml-32 md:w-[40%] '/>
             <div>
                 <motion.div 
                     initial={{ opacity: 0, x:15 }}
@@ -68,6 +62,19 @@ export default function Contact() {
                     </>)}
                 </div>
             </div>
+            <motion.img 
+                initial={{ opacity: 0, y:15 }}
+                whileInView={{ opacity: 1, y:0 }}
+                viewport={{ once: true }}
+                transition={{ duration: .8, delay: .3}}
+
+                src='/seagull.png'
+                alt='seagull image'
+                width='800'
+                height='800'
+                className={classNames('object-contain w-full sm:max-w-[440px] ml-0',
+                                      'md:max-w-full md:w-[40vw]'
+                )}/>
         </div>
     )
 }

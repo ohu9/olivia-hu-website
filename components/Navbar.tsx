@@ -120,7 +120,7 @@ const MobileMenu = () => {
                             href={tab.href}
                             // target={tab.target}
                             aria-current={tab.current ? 'page' : undefined}
-                            className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[2] ? "text-black italic" : "text-zinc-400",
+                            className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
                                 "text-2xl tracking-wide font-playfair leading-none")}>
                             {tab.name.toUpperCase()}
                         </DisclosureButton>

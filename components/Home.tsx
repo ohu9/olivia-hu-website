@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
+import { LinkButton } from "./Buttons";
 
 export function Hello() {
     return (
@@ -54,6 +55,14 @@ export function Home() {
                     exit={{ opacity:0, y:-20 }}
                     transition={{duration: 0.6, delay:1.0}}>
                     graphics designer &amp; engineer
+                </motion.div>
+                <motion.div 
+                    initial={{ opacity: 0, x:15 }}
+                    whileInView={{ opacity: 1, x:0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .8}}
+                    className="mt-7">
+                    <LinkButton color="black" href='https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view' label='RESUME'/>
                 </motion.div>
             </div>
         </div>
