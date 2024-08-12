@@ -24,8 +24,8 @@ const links = [
 
 export default function Contact() {
     return (
-        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[300px] mx-16 gap-12",
-                                    "md:flex-row md:gap-20 w-full h-[600px] md:mt-[300px] md:mx-0",
+        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[220px] mx-16 gap-12",
+                                    "md:flex-row md:gap-20 w-full h-[600px] md:mt-[240px] md:mx-0",
         )}>
             <motion.img 
                 initial={{ opacity: 0, y:15 }}

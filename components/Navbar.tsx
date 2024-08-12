@@ -77,7 +77,7 @@ export default function Navbar() {
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
                                 scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
                                 scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name == 'about' && "text-white",
-                                (scrollPosition < tabs[1].range[0] || scrollPosition >= tabs[1].range[1]) && "hover:text-zinc-700",
+                                scrollPosition < tabs[2].range[0] || scrollPosition >= tabs[2].range[1] && "hover:text-zinc-700",
                                 "text-2xl tracking-wide font-playfair leading-none transition duration-100")}>
                             {tab.name.toUpperCase()}
                         </Link>
@@ -97,7 +97,7 @@ const MobileMenu = () => {
     return (
         <Disclosure as="div">
             <div className="lg:hidden fixed flex justify-between items-center z-30 mt-10 mx-4">
-                <DisclosureButton className={classNames(scrollPosition > tabs[1].range[0] && scrollPosition <= tabs[1].range[1]? "text-zinc-50" : "text-zinc-500",
+                <DisclosureButton className={classNames(scrollPosition > tabs[2].range[0] && scrollPosition <= tabs[2].range[1]? "text-zinc-50" : "text-zinc-500",
                             "group inline-flex items-center justify-center p-2")}>
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
