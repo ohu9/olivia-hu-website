@@ -24,8 +24,8 @@ const links = [
 
 export default function Contact() {
     return (
-        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[300px] mx-16 gap-12",
-                                    "md:flex-row md:gap-20 w-full h-[600px] md:mt-[300px] md:mx-0",
+        <div className={classNames("flex flex-col-reverse text-[#403830] mt-[220px] mx-16 gap-12", 
+                                   "md:flex-row md:gap-20 w-full h-[600px] md:mt-[240px] md:mx-0",
         )}>
             <motion.img 
                 initial={{ opacity: 0, y:15 }}
@@ -34,7 +34,7 @@ export default function Contact() {
                 transition={{ duration: .8, delay: .3}}
 
                 src='/seagull.png'
-                alt='rocket drones image'
+                alt='seagull image'
                 width='800'
                 height='800'
                 className='object-contain md:min-h-[80%] w-full lg:ml-32 md:w-[40%] '/>

@@ -1,4 +1,5 @@
 import { Home } from "@/components/Home";
+import About from "@/components/About";
 import { Portfolio, MobilePortfolio} from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 
@@ -14,7 +15,7 @@ export default function Page() {
 			{/* ABOUT */}
 			<section id='about' className="snap-start" />
 			<div className="flex flex-row h-[1000px] bg-[#6B766E]">
-				
+				<About />
 			</div>
 
 			{/* PORTOFLIO */}
