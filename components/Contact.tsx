@@ -33,11 +33,11 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: .8, delay: .3}}
 
-                src='/projects/agora.png'
+                src='/seagull.png'
                 alt='rocket drones image'
                 width='800'
                 height='800'
-                className='object-cover md:min-h-[80%] w-full lg:ml-32 md:w-[40%] '/>
+                className='object-contain md:min-h-[80%] w-full lg:ml-32 md:w-[40%] '/>
             <div>
                 <motion.div 
                     initial={{ opacity: 0, x:15 }}

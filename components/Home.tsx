@@ -39,21 +39,21 @@ export function Home() {
                     animate={{ opacity:1, x:0 }}
                     exit={{ opacity:0, y:-20 }}
                     transition={{duration: 0.6, delay:0.8}}>
-                    CS Undergraduate
+                    CS Undergraduate at Georgia Tech
                 </motion.div>
                 <motion.div
                     initial={{ opacity:0, x:20 }} 
                     animate={{ opacity:1, x:0 }}
                     exit={{ opacity:0, y:-20 }}
                     transition={{duration: 0.6, delay:.9}}>
-                    at Georgia Tech
+                    ful stack developer
                 </motion.div>
                 <motion.div
                     initial={{ opacity:0, x:20 }} 
                     animate={{ opacity:1, x:0 }}
                     exit={{ opacity:0, y:-20 }}
                     transition={{duration: 0.6, delay:1.0}}>
-                    aspiring graphics engineer 
+                    graphics designer &amp; engineer
                 </motion.div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import classNames from "classnames";
 const items = [
     {
         id: 101,
-        name: 'Agora Website',
+        name: 'Productivity App Design Project',
         tags: ['Frontend',],
         img: '/projects/agora.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
@@ -185,6 +185,21 @@ export function Portfolio() {
             </div>
 
             {/* OTHER PROJECTS */}
+            <div className="flex flex-col w-full h-96 mt-32">
+                <motion.div
+                    initial={{ opacity: 0, y:15 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .5}}
+                    className="flex flex-col items-center w-full h-96">
+                        <div className="flex gap-8 items-center mx-auto">
+                            <span className="inline w-52 h-[1px] bg-black"/>
+                            <p className="inline font-playfair text-4xl text-center font-bold tracking-[.4rem]">other projects</p>
+                            <span className="inline w-52 h-[1px] bg-black"/>
+                        </div> 
+                </motion.div>
+
+            </div>
 
         </div>
         // <div className="w-3/4 mt-12 mx-auto md:grid xl:grid-cols-3 md:grid-cols-2 md:gap-7 space-y-5 md:space-y-0">
