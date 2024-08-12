@@ -16,12 +16,6 @@ const tabs = [
         current: false,
         range: [0,945],
     },
-    {
-        name: 'about',
-        href: '/#about',
-        current: false,
-        range: [945,1905],
-    },
     // {
     //     name: 'experience',
     //     href: '/experience',
@@ -31,7 +25,13 @@ const tabs = [
         name: 'portfolio',
         href: '/#portfolio',
         current: false,
-        range: [1905,4905],
+        range: [945,3945],
+    },
+    {
+        name: 'about',
+        href: '/#about',
+        current: false,
+        range: [3945,4905],
     },
     {
         name: 'contact',
@@ -59,7 +59,7 @@ export default function Navbar() {
     <>
         <MobileMenu/>
         <nav className={classNames('hidden w-36 lg:fixed z-20 mt-12 ml-10 lg:flex lg:flex-row lg:gap-5 lg:items-center lg:justify-between',
-                    scrollPosition >= tabs[2].range[0]+70 && scrollPosition < tabs[2].range[1]-70 && 'bg-zinc-50 opacity-75'
+                    scrollPosition >= tabs[1].range[0]+70 && scrollPosition < tabs[1].range[1]-70 && 'bg-zinc-50 opacity-75'
         )}>
             <div className="flex flex-col mr-12"> 
             {
@@ -75,8 +75,8 @@ export default function Navbar() {
                             href={tab.href} 
                             // target={tab.target}
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
-                                scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
-                                scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name == 'about' && "text-white",
+                                scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
+                                scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name == 'about' && "text-white",
                                 (scrollPosition < tabs[1].range[0] || scrollPosition >= tabs[1].range[1]) && "hover:text-zinc-700",
                                 "text-2xl tracking-wide font-playfair leading-none transition duration-100")}>
                             {tab.name.toUpperCase()}

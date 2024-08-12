@@ -11,12 +11,6 @@ export default function Page() {
 				<Home />
 			</div>
 
-			{/* ABOUT */}
-			<section id='about' className="snap-start" />
-			<div className="flex flex-row h-[1000px] bg-[#6B766E]">
-				
-			</div>
-
 			{/* PORTOFLIO */}
 			<section id='portfolio' className="snap-start" />
 			<div className="flex flex-col h-[3000px] bg-zinc-50">
@@ -25,6 +19,12 @@ export default function Page() {
 				</p>
 				<Portfolio />
 				<MobilePortfolio />
+			</div>
+
+			{/* ABOUT */}
+			<section id='about' className="snap-start" />
+			<div className="flex flex-row h-[1000px] bg-[#6B766E]">
+				
 			</div>
 
 			{/* CONTACT */}
