@@ -22,7 +22,7 @@ const links = [
     },
     {
         label: "Resume",
-        href: "https://drive.google.com/drive/u/0/folders/1H8a5kiWyaJMFw55MmKis5Dcez20BTHNn",
+        href: "https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view",
         img: "/resume.png",
     }
 ]
@@ -47,7 +47,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .7}}
                     className="mt-0 ml-2 md:mt-5 md:ml-4 font-ebg tracking-[.1rem]">
-                    Let&apos;s get in touch &mdash; I'd love to talk more.
+                    Let&apos;s get in touch &mdash; I`&apos;d love to talk more.
                 </motion.div>
                 <div className="flex flex-col gap-2 mt-12">
                     {links.map((link,i) => <>

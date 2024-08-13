@@ -12,7 +12,8 @@ import { motion } from 'framer-motion';
 const tabs = [
     {
         name: 'home',
-        href: '/#home',
+        href: '/#top',
+        target: '',
         current: false,
         range: [0,945],
     },
@@ -24,28 +25,31 @@ const tabs = [
     {
         name: 'about',
         href: '/#about',
+        target: '',
         current: false,
         range: [945,1905],
     },
     {
         name: 'portfolio',
         href: '/#portfolio',
+        target: '',
         current: false,
         range: [1905,4905],
     },
     {
         name: 'contact',
         href: '/#contact',
+        target: '',
         current: false,
         range: [4905,6000],
     },
-    // {
-    //     name: 'resume',
-    //     href: 'https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view?usp=sharing',
-    //     target: '_blank',
-    //     current: false,
-
-    // }
+    {
+        name: 'resume',
+        href: 'https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view',
+        target: '_blank',
+        current: false,
+        range: [6000,6000],
+    }
 ]
 
 export default function Navbar() {
@@ -65,6 +69,7 @@ export default function Navbar() {
             {
                 tabs.map((tab,i) => 
                     <motion.div
+                        key={tab.name}
                         initial={{ opacity:0, y:-20 }} 
                         animate={{ opacity:1, y:0 }}
                         exit={{ opacity:0, y:-20 }}
@@ -73,7 +78,7 @@ export default function Navbar() {
                         <Link 
                             key={tab.name}
                             href={tab.href} 
-                            // target={tab.target}
+                            target={tab.target}
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
                                 scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name != 'about' && "text-zinc-300 opacity-75 hover:text-zinc-300 hover:opacity-100",
                                 scrollPosition >= tabs[1].range[0] && scrollPosition < tabs[1].range[1] && tab.name == 'about' && "text-white",
@@ -109,6 +114,7 @@ const MobileMenu = () => {
             {
                 tabs.map((tab, i) => 
                     <motion.div
+                        key={tab.name}
                         initial={{ opacity:0, y:-20 }} 
                         animate={{ opacity:1, y:0 }}
                         exit={{ opacity:0, y:-20 }}
@@ -118,7 +124,7 @@ const MobileMenu = () => {
                             key={tab.name}
                             as="a"
                             href={tab.href}
-                            // target={tab.target}
+                            target={tab.target}
                             aria-current={tab.current ? 'page' : undefined}
                             className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
                                 "text-2xl tracking-wide font-playfair leading-none")}>

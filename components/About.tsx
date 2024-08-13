@@ -25,9 +25,15 @@ export default function About(){
                     whileInView={{ opacity: 1, x:0 }}
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .7}}
-                    className="mt-7 md:mt-5 font-cormorant tracking-wide text-ellipsis overflow-scroll md:max-h-[400px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis magna a nisl convallis, vitae mattis purus commodo. Maecenas non massa ac sem ullamcorper porttitor efficitur quis metus. Mauris nec diam est. Sed eu dictum lectus. Morbi et diam ultricies, vehicula arcu id, vehicula ligula. Cras non porttitor velit, sed placerat diam. Duis commodo tellus nibh, vitae maximus tellus convallis non. Curabitur laoreet sollicitudin elit, condimentum efficitur augue venenatis et. Nunc et dolor eleifend, porttitor nunc eget, consequat ante. Nam ultrices metus id interdum sodales. Suspendisse ullamcorper aliquam iaculis.
-                    <br/><br/>Curabitur sit amet lacus nec orci blandit elementum. Curabitur efficitur, nunc a semper venenatis, nulla sem consequat lacus, vel bibendum arcu ex et mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id quam ac urna gravida hendrerit. Etiam imperdiet condimentum dolor vel efficitur. Mauris vitae ipsum non sem fermentum mattis. Duis porta neque ut magna vestibulum porta. Nullam quis finibus tortor. In ligula urna, consequat quis blandit ac, accumsan eu sem.
+                    className="mt-7 md:mt-5 font-cormorant tracking-wide text-ellipsis overflow-scroll md:max-h-[450px] max-h-[600px]">
+                    Hey there! I'm Olivia, a CS major at Georgia Tech with concentrations in AI and media technologies.
+                    <br/><br/>
+                    After a few years of learning and exploration I've shifted my focus towards the public-facing aspects of software development. I've perhaps romanticized the art of conveying developers' work to users via seamless UI, but I do think I've found a rather sweet spot in this versatile field, marrying my technical education and affinity for design.
+                    My main strength lies in the interdisciplinary experience I bring to the table. I've entertained and explored many interests throughout my education so far &mdash; psychology, education, illustration, graphic design, writing &amp; publication, etc. &mdash; which allow me to design and implement with a more extensive and contextualized understanding of my task.
+                    I also bring thoroughness: though I'm fairly detail-oriented, I find that a comprehensive understanding of the systems I'm using allows me to produce more conscientious and compatible work. That's why I chose full-stack development &mdash; there's nothing more gratifying than seeing all parts of an application work smoothly together.
+                    <br/><br/>
+                    Outside all these credentials, I enjoy running, reading, journaling, and playing piano/guitar. I'm an avid podcast-listener and I've been getting into pickleball &mdash; just, you know, trying to touch some grass... I also lead a small group at my campus fellowship, and I find myself most fulfilled spending time with &amp; serving others. 
+                    Woa thanks for reading all this &amp; enjoy the rest of the site! :&#41;
                 </motion.div>
                 <div className="flex justify-end mt-16 mr-2 md:hidden">
                     <span className="w-6 h-6 bg-[#ECECE1]" /> <span className="w-6 h-6 bg-[#ECECE1] ml-4" />
