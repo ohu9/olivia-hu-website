@@ -34,21 +34,21 @@ const tabs = [
         href: '/#portfolio',
         target: '',
         current: false,
-        range: [1905,4905],
+        range: [1905,5405],
     },
     {
         name: 'contact',
         href: '/#contact',
         target: '',
         current: false,
-        range: [4905,6000],
+        range: [5405,6500],
     },
     {
         name: 'resume',
         href: 'https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view',
         target: '_blank',
         current: false,
-        range: [6000,6000],
+        range: [6500,6500],
     }
 ]
 

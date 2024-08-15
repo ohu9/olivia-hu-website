@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { LinkButton } from "./Buttons";
 import classNames from "classnames";
+import { Popover } from "@headlessui/react";
 
 const items = [
     {
         id: 101,
-        name: 'Productivity App Design Project',
-        tags: ['Frontend',],
+        name: 'Tasoki: Work Productivity UI Design',
+        tags: ['Frontend','Design', 'UI/UX'],
         img: '/projects/agora.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
         href: 'www.gtagora.com',
@@ -16,6 +17,24 @@ const items = [
     },
     {
         id: 102,
+        name: 'CS 3451 Computer Graphics',
+        tags: ['Graphics', 'Illustration'],
+        img: '/projects/cs-3451.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
+        href: undefined,
+        github: 'https://github.com/ohu9/cs3451'
+    },
+    {
+        id: 103,
+        name: 'Personal Website',
+        tags: ['Frontend', 'Design', 'Illustration'],
+        img: '/projects/personal-website.png',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
+        href: 'https://olivia-hu.onrender.com/',
+        github: 'https://github.com/ohu9/olivia-hu-website'
+    },
+    {
+        id: 104,
         name: 'Empathy Bytes',
         tags: ['Frontend',],
         img: '/projects/empathy-bytes.png',
@@ -24,24 +43,34 @@ const items = [
         github: 'https://github.com/genefu/empathy-bytes-react-native-app'
     },
     {
-        id: 103,
-        name: 'Personal Website',
-        tags: ['Frontend', 'Illustration'],
-        img: '/projects/personal-website.png',
+        id: 105,
+        name: 'Deep fake paper',
+        tags: ['AI',],
+        img: '/projects/agora-website.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: 'https://olivia-hu.onrender.com/',
-        github: 'https://github.com/ohu9/olivia-hu-website'
+        href: '',
+        github: undefined,
     },
     {
-        id: 104,
-        name: 'CS 3451 Computer Graphics',
-        tags: ['Graphics', 'Illustration'],
-        img: '/projects/cs-3451.png',
+        id: 106,
+        name: 'Art & Journaling Portfolio',
+        tags: ['Frontend',],
+        img: undefined,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: undefined,
-        github: 'https://github.com/ohu9/cs3451'
+        href: '',
+        github: '',
     },
+    // {
+    //     id: 106,
+    //     name: 'Empathy Bytes',
+    //     tags: ['Frontend',],
+    //     img: '/projects/empathy-bytes.png',
+    //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
+    //     href: '',
+    //     github: '',
+    // },
 ]
+
 export function Portfolio() {
     return (
         <div className="hidden lg:block">
@@ -199,36 +228,35 @@ export function Portfolio() {
                         </div> 
                 </motion.div>
 
+                <div className={classNames("grid grid-cols-2 gap-12 mt-20 w-3/4 mx-auto",
+                                           "xl:grid-cols-3"
+                )}>
+                    {items.map((item,i) => 
+                        <motion.div key={item.name} className="h-[50vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:scale-[102%] hover:shadow-lg transition-all duration-200"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: .8, delay: .2+(.2*i)}}>
+                            {item.img ? 
+                            <Image 
+                                src={item.img}
+                                alt={item.name + ' image'}
+                                width='800'
+                                height='800'
+                                className='w-full h-[60%] object-cover rounded-2xl'/>
+                            :
+                            <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
+                            }
+                            <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
+                            <p className="mt-3 text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
+                            
+                        </motion.div>
+                    )}
+                </div>
+
             </div>
 
         </div>
-        // <div className="w-3/4 mt-12 mx-auto md:grid xl:grid-cols-3 md:grid-cols-2 md:gap-7 space-y-5 md:space-y-0">
-
-        //     {/* AGORA */}
-
-        //     {/* OTHER PROJECTS */}
-
-        //     {items.map((item,i) => 
-        //         <motion.div key={item.name} className="h-[32rem] bg-[#d1f0d6]"
-        //             initial={{ opacity: 0 }}
-        //             whileInView={{ opacity: 1 }}
-        //             viewport={{ once: true }}
-        //             transition={{ duration: .8, delay: .5+(.2*i)}}>
-        //             {item.img ? 
-        //             <Image 
-        //                 src={item.img}
-        //                 alt={item.name + ' image'}
-        //                 width='800'
-        //                 height='800'
-        //                 className='h-[90%] object-cover'/>
-        //             :
-        //             <div className="bg-neutral-200 "/>
-        //             }
-        //             <p className="mt-2 font-inter">{item.name}</p>
-                    
-        //         </motion.div>
-        //     )}
-        // </div>
     )
 }
 
