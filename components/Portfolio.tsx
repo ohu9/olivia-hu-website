@@ -3,17 +3,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { LinkButton } from "./Buttons";
 import classNames from "classnames";
+import Link from "next/link";
 import { Popover } from "@headlessui/react";
 
 const items = [
     {
         id: 101,
-        name: 'Tasoki: Work Productivity UI Design',
+        name: 'UI Design Project: Tasoki',
         tags: ['Frontend','Design', 'UI/UX'],
         img: '/projects/agora.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: 'www.gtagora.com',
-        github: 'https://github.com/GTagora/AgoraFrontend'
+        description: 'Applying UI/UX research techniques (from surveys to hierarchical task analysis to prototyping) to design a high-fidelity prototype of a work productivity app.',
+        href: 'https://drive.google.com/drive/folders/19wfm0CNIBkEg1STXewyT18SC7LGgu9Jr?usp=sharing',
+        github: undefined,
     },
     {
         id: 102,
@@ -42,33 +43,24 @@ const items = [
         href: 'https://educast.library.gatech.edu/',
         github: 'https://github.com/genefu/empathy-bytes-react-native-app'
     },
-    {
-        id: 105,
-        name: 'Deep fake paper',
-        tags: ['AI',],
-        img: '/projects/agora-website.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: '',
-        github: undefined,
-    },
-    {
-        id: 106,
-        name: 'Art & Journaling Portfolio',
-        tags: ['Frontend',],
-        img: undefined,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: '',
-        github: '',
-    },
+    // {
+    //     id: 105,
+    //     name: 'Deep fake paper',
+    //     tags: ['AI',],
+    //     img: '/projects/agora-website.png',
+    //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
+    //     href: '',
+    //     github: undefined,
+    // },
     // {
     //     id: 106,
-    //     name: 'Empathy Bytes',
+    //     name: 'Art & Journaling Portfolio',
     //     tags: ['Frontend',],
-    //     img: '/projects/empathy-bytes.png',
+    //     img: undefined,
     //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
     //     href: '',
     //     github: '',
-    // },
+    // }
 ]
 
 export function Portfolio() {
@@ -232,7 +224,7 @@ export function Portfolio() {
                                            "xl:grid-cols-3"
                 )}>
                     {items.map((item,i) => 
-                        <motion.div key={item.name} className="h-[50vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:scale-[102%] hover:shadow-lg transition-all duration-200"
+                        <motion.div key={item.name} className="xl:h-[52vh] h-[39vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:scale-[102%] hover:shadow-lg transition-all duration-200"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -243,13 +235,18 @@ export function Portfolio() {
                                 alt={item.name + ' image'}
                                 width='800'
                                 height='800'
-                                className='w-full h-[60%] object-cover rounded-2xl'/>
+                                className='w-full xl:h-[60%] h-[75%] object-cover rounded-2xl'/>
                             :
                             <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
                             }
-                            <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
-                            <p className="mt-3 text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
-                            
+                            <div className="flex flex-col xl:h-[42%] h-[25%] justify-between">
+                                <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
+                                <p className="invisible xl:visible text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
+                                <div className="flex gap-5 text-xs font-inter text-neutral-400 underline">
+                                    {item.href && <Link href={item.href} target="_blank">Website</Link>}
+                                    {item.github && <Link href={item.github} target="_blank">Github</Link>}
+                                </div>
+                            </div>
                         </motion.div>
                     )}
                 </div>
