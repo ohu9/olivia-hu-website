@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Sidebar from "@/components/Sidebar";
+import Navbar from "@/src/components/Navbar";
+import Footer from "@/src/components/Footer";
+import Sidebar from "@/src/components/Sidebar";
 import {EB_Garamond, Cormorant, Playfair_Display, Inter} from 'next/font/google'
 import classNames from "classnames";
 

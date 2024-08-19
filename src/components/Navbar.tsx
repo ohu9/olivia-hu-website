@@ -1,12 +1,10 @@
 'use client';
-import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import { usePathname } from "next/navigation";
-import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { useScrollPosition } from '../hooks/useScrollPosition';
 import { motion } from 'framer-motion';
 
 const tabs = [

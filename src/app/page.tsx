@@ -1,7 +1,7 @@
-import { Home } from "@/components/Home";
-import About from "@/components/About";
-import { Portfolio, MobilePortfolio} from "@/components/Portfolio";
-import Contact from "@/components/Contact";
+import { Home } from "@/src/components/Home";
+import About from "../components/About";
+import { Portfolio, MobilePortfolio} from "@/src/components/Portfolio";
+import Contact from "@/src/components/Contact";
 
 export default function Page() {
 	return (
