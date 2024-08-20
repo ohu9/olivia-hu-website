@@ -4,7 +4,6 @@ import Image from "next/image";
 import { LinkButton } from "./Buttons";
 import classNames from "classnames";
 import Link from "next/link";
-import { Popover } from "@headlessui/react";
 
 const items = [
     {
