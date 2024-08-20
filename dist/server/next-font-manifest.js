@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/oliviahu/code/olivia-hu-website/src/app/layout":["static/media/327f060f68a632a5-s.p.woff2","static/media/a9c5269db9db986d-s.p.woff2","static/media/a34f9d1faa5f3315-s.p.woff2","static/media/dcc209c0b1ab30af-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
