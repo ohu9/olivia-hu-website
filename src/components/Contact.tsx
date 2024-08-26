@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { SocialButton } from "./Buttons";
 import classNames from "classnames";
+import email_img from '/email.png'
 
 const links = [
     {
@@ -46,7 +47,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .7}}
                     className="mt-0 ml-2 md:mt-5 md:ml-4 font-ebg tracking-[.1rem]">
-                    Let&apos;s get in touch &mdash; I`&apos;d love to talk more.
+                    Let&apos;s get in touch &mdash; I&apos;d love to talk more.
                 </motion.div>
                 <div className="flex flex-col gap-2 mt-12">
                     {links.map((link,i) => <>

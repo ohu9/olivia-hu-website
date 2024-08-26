@@ -28,8 +28,9 @@ export function SocialButton( { label, href, img }: { label:string, href:string,
                         // "border-2 border-[#615549] rounded-3xl",
                         "transition-all duration-100")}>
             <Image 
-                src={img}
+                src={`${img}`}
                 alt={label + " image"}
+                loading="lazy"
                 width='50'
                 height='50'
                 className='inline w-6 h-6'/>

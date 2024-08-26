@@ -230,7 +230,7 @@ export function Portfolio() {
                             transition={{ duration: .8, delay: .2+(.2*i)}}>
                             {item.img ? 
                             <Image 
-                                src={item.img}
+                                src={`${item.img}`}
                                 alt={item.name + ' image'}
                                 width='800'
                                 height='800'
