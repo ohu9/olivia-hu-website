@@ -17,6 +17,11 @@ routing/layout
 server/client side rendering
 - client-side components in ./app/components folder
 
+navbar
+- height of each "page" determined in app/page.tsx styles – default 1000px per section
+- specify style changes in navbar via 'range' attribute in components/Navbar.tsx const tabs (slightly offset)
+# useScrollPosition tutorial: https://www.skillthrive.com/posts/change-nav-on-scroll
+
 
 STYLING //////////////////////////////////////////////////////////////
 
@@ -29,6 +34,8 @@ customize tailwind variables in tailwind.config.ts
 
 google fonts import
     # update: refer to this link https://blog.logrocket.com/how-to-use-custom-fonts-tailwind-css/ 
+    - import fonts in global.css
+    - configure custom fonts in tailwind.config.ts
     # next.js docs: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css
     # variable fonts: https://fonts.google.com/variablefonts
     - display:'swap' indicates to load page immediately with fall-back fonts, if needed
@@ -37,6 +44,6 @@ google fonts import
     - cormorant, ebg, inter
 
 
-
-
-
+framer motion
+# https://www.framer.com/motion/
+- npm install framer-motion
