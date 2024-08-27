@@ -5,14 +5,15 @@ import { LinkButton } from "./Buttons";
 import classNames from "classnames";
 import Link from "next/link";
 
-const items = [
+const projects = [
     {
         id: 101,
         name: 'UI Design Project: Tasoki',
         tags: ['Frontend','Design', 'UI/UX'],
-        img: '/projects/agora.png',
+        img: '/projects/tasoki2.png',
         description: 'Applying UI/UX research techniques (from surveys to hierarchical task analysis to prototyping) to design a high-fidelity prototype of a work productivity app.',
         href: 'https://drive.google.com/drive/folders/19wfm0CNIBkEg1STXewyT18SC7LGgu9Jr?usp=sharing',
+        website: 'https://drive.google.com/drive/folders/19wfm0CNIBkEg1STXewyT18SC7LGgu9Jr?usp=sharing',
         github: undefined,
     },
     {
@@ -20,8 +21,9 @@ const items = [
         name: 'CS 3451 Computer Graphics',
         tags: ['Graphics', 'Illustration'],
         img: '/projects/cs-3451.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: undefined,
+        description: 'A folder of various projects completed in Computer Graphics, featuring exploration of mesh development, lighting & shading, noise, ray tracing, and more. A work in progress for better displaying the results...',
+        href: 'https://drive.google.com/drive/folders/1xwKP5jMx8qqtF6bngAS0sUuesXpuc50n?usp=sharing',
+        website: 'https://drive.google.com/drive/folders/1xwKP5jMx8qqtF6bngAS0sUuesXpuc50n?usp=sharing',
         github: 'https://github.com/ohu9/cs3451'
     },
     {
@@ -29,17 +31,19 @@ const items = [
         name: 'Personal Website',
         tags: ['Frontend', 'Design', 'Illustration'],
         img: '/projects/personal-website.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-        href: 'https://olivia-hu.onrender.com/',
-        github: 'https://github.com/ohu9/olivia-hu-website'
+        description: 'This website! A personal portfolio and passion project, designed, illustrated & developed by yours truly. Tech stack: React, TypeScript, Next.js, TailwindCSS',
+        href: 'https://github.com/ohu9/olivia-hu-website',
+        github: 'https://github.com/ohu9/olivia-hu-website',
+        figma: 'https://www.figma.com/design/Y3DGVIyc1lAOoINFPlgeM9/Personal-Website?node-id=0-1&t=D47eBbIY2q7Z1q05-1',
     },
     {
         id: 104,
         name: 'Empathy Bytes',
         tags: ['Frontend',],
         img: '/projects/empathy-bytes.png',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
+        description: 'A vertically integrated research project at GT focused on developing immersive tech that platforms stories from our local community. I help design and full-stack development on the website and mobile app.',
         href: 'https://educast.library.gatech.edu/',
+        website: 'https://educast.library.gatech.edu/',
         github: 'https://github.com/genefu/empathy-bytes-react-native-app'
     },
     // {
@@ -222,30 +226,35 @@ export function Portfolio() {
                 <div className={classNames("grid grid-cols-2 gap-12 mt-20 w-3/4 mx-auto",
                                            "xl:grid-cols-3"
                 )}>
-                    {items.map((item,i) => 
-                        <motion.div key={item.name} className="xl:h-[52vh] h-[39vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:scale-[102%] hover:shadow-lg transition-all duration-200"
+                    {projects.map((item,i) => 
+                        <motion.div key={item.name} className="group xl:h-[52vh] h-[39vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: .8, delay: .2+(.2*i)}}>
-                            {item.img ? 
-                            <Image 
-                                src={`${item.img}`}
-                                alt={item.name + ' image'}
-                                width='800'
-                                height='800'
-                                className='w-full xl:h-[60%] h-[75%] object-cover rounded-2xl'/>
-                            :
-                            <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
-                            }
-                            <div className="flex flex-col xl:h-[42%] h-[25%] justify-between">
-                                <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
-                                <p className="invisible xl:visible text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
-                                <div className="flex gap-5 text-xs font-inter text-neutral-400 underline">
-                                    {item.href && <Link href={item.href} target="_blank">Website</Link>}
-                                    {item.github && <Link href={item.github} target="_blank">Github</Link>}
+                            <Link href={item.href} target='_blank'>
+                                {item.img ? 
+                                <div className='relative w-full xl:h-[27vh] h-[25vh] rounded-2xl overflow-hidden'>
+                                    <Image 
+                                        src={`${item.img}`}
+                                        alt={item.name + ' image'}
+                                        width='800'
+                                        height='800'
+                                        className='absolute object-cover h-full rounded-2xl ease-in-out duration-300 group-hover:scale-[110%]'/>
                                 </div>
-                            </div>
+                                :
+                                <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
+                                }
+                                <div className="flex flex-col xl:h-[42%] h-[25%] justify-between">
+                                    <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
+                                    <p className="invisible xl:visible text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
+                                    <div className="flex gap-5 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
+                                        {item.website && <Link href={item.website} target="_blank" className="hover:underline">Website</Link>}
+                                        {item.github && <Link href={item.github} target="_blank" className="hover:underline">Github</Link>}
+                                        {item.figma && <Link href={item.figma} target="_blank" className="hover:underline">Figma</Link>}
+                                    </div>
+                                </div>
+                            </Link>
                         </motion.div>
                     )}
                 </div>
@@ -329,8 +338,37 @@ export function MobilePortfolio() {
                     <LinkButton color="black" href='https://www.gtagora.com/' label='WEBSITE'/>
                 </div>
             </div>
+            <div className="mx-auto my-12 bg-neutral-800 w-10 h-px" />
 
             {/* OTHER PROJECTS */}
+            <p className="font-playfair text-3xl text-center font-bold tracking-[.4rem]">other projects</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 gap-6 mt-6 sm:mt-10">
+                {projects.map((item) => 
+                    <Link href={item.href} target='_blank' className="group flex sm:flex-col flex-row bg-white gap-8 p-6 w-full rounded-xl shadow-md">
+                        {item.img ? 
+                        <div className='relative overflow-hidden sm:w-full w-32 sm:h-40 h-28 rounded-lg'>
+                            <Image 
+                                src={`${item.img}`}
+                                alt={item.name + ' image'}
+                                width='800'
+                                height='800'
+                                className='absolute object-cover h-full rounded-2xl ease-in-out duration-300 group-hover:scale-[110%]'/>
+                        </div>
+                        :
+                        <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
+                        }
+                        <div className="flex flex-col">
+                            <p className="text-lg font-semibold font-inter text-neutral-600">{item.name}</p>
+                            <div className="mt-3 flex gap-2 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
+                                {item.website && <Link href={item.website} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Website</Link>}
+                                {item.github && <Link href={item.github} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Github</Link>}
+                                {item.figma && <Link href={item.figma} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Figma</Link>}
+                            </div>
+                        </div>
+                    </Link>
+                )}
+            </div>
+            
         </div>
     )
 }

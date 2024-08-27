@@ -32,7 +32,6 @@ export function Home() {
                         width='1500'
                         height='1500'
                         className="object-cover" />
-                {/* <p className="font-playfair text-black text-[96pt] text-center">OLIVIA HU</p> */}
             </motion.div>
             <div className="mt-10 md:ml-20 text-center md:text-left flex flex-col gap-2 font-cormorant text-lg">
                 <motion.div
