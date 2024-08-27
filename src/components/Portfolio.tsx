@@ -344,7 +344,7 @@ export function MobilePortfolio() {
             <p className="font-playfair text-3xl text-center font-bold tracking-[.4rem]">other projects</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 gap-6 mt-6 sm:mt-10">
                 {projects.map((item) => 
-                    <Link href={item.href} target='_blank' className="group flex sm:flex-col flex-row bg-white gap-8 p-6 w-full rounded-xl shadow-md">
+                    <Link key={item.name} href={item.href} target='_blank' className="group flex sm:flex-col flex-row bg-white gap-8 p-6 w-full rounded-xl shadow-md">
                         {item.img ? 
                         <div className='relative overflow-hidden sm:w-full w-32 sm:h-40 h-28 rounded-lg'>
                             <Image 
