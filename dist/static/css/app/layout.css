@@ -902,6 +902,21 @@ video {
 .mt-\[2px\] {
   margin-top: 2px;
 }
+.mb-28 {
+  margin-bottom: 7rem;
+}
+.mb-24 {
+  margin-bottom: 6rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;

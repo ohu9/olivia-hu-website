@@ -237,13 +237,13 @@ export function Portfolio() {
             </div>
 
             {/* OTHER PROJECTS */}
-            <div className="flex flex-col w-full h-96 mt-32">
+            <div className="flex flex-col justify-start w-full h-auto mt-32">
                 <motion.div
                     initial={{ opacity: 0, y:15 }}
                     whileInView={{ opacity: 1, y:0 }}
                     viewport={{ once: true }}
                     transition={{ duration: .8, delay: .5}}
-                    className="flex flex-col items-center w-full h-96">
+                    className="flex flex-col items-center w-full">
                         <div className="flex gap-8 items-center mx-auto">
                             <span className="inline w-52 h-[1px] bg-black"/>
                             <p className="inline font-playfair text-4xl text-center font-bold tracking-[.4rem]">other projects</p>
@@ -251,7 +251,7 @@ export function Portfolio() {
                         </div> 
                 </motion.div>
 
-                <div className={classNames("grid grid-cols-2 gap-12 mt-20 w-3/4 mx-auto",
+                <div className={classNames("grid grid-cols-2 gap-12 mt-20 w-3/4 mx-auto mb-24",
                                            "xl:grid-cols-3"
                 )}>
                     {projects.map((item,i) => 
@@ -389,7 +389,7 @@ export function MobilePortfolio() {
 
             {/* OTHER PROJECTS */}
             <p className="font-playfair text-3xl text-center font-bold tracking-[.4rem]">other projects</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 gap-6 mt-6 sm:mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 gap-6 mt-6 sm:mt-10 mb-14">
                 {projects.map((item) => 
                     <Link key={item.name} href={item.href} target='_blank' className="group flex sm:flex-col flex-row bg-white gap-8 p-6 w-full rounded-xl shadow-md">
                         {item.img ? 
