@@ -255,9 +255,9 @@ export function Portfolio() {
                                            "xl:grid-cols-3"
                 )}>
                     {projects.map((item,i) => 
-                        <Popover>
+                        <Popover key={item.name}>
                             <PopoverButton as="div">
-                                <motion.div key={item.name} className="group min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
+                                <motion.div className="group min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
