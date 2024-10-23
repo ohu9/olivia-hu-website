@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Popover, PopoverButton, PopoverPanel, PopoverBackdrop } from "@headlessui/react";
 import Image from "next/image";
 import { LinkButton } from "./Buttons";
 import classNames from "classnames";
@@ -8,7 +9,8 @@ import Link from "next/link";
 const projects = [
     {
         id: 101,
-        name: 'UI Design Project: Tasoki',
+        name: 'UI Research & Design Project: Tasoki',
+        date: 'Spring 2024',
         tags: ['Frontend','Design', 'UI/UX'],
         img: '/projects/tasoki2.png',
         description: 'Applying UI/UX research techniques (from surveys to hierarchical task analysis to prototyping) to design a high-fidelity prototype of a work productivity app.',
@@ -19,6 +21,7 @@ const projects = [
     {
         id: 102,
         name: 'CS 3451 Computer Graphics',
+        date: 'Spring 2024',
         tags: ['Graphics', 'Illustration'],
         img: '/projects/cs-3451.png',
         description: 'A folder of various projects completed in Computer Graphics, featuring exploration of mesh development, lighting & shading, noise, ray tracing, and more. A work in progress for better displaying the results...',
@@ -29,6 +32,7 @@ const projects = [
     {
         id: 103,
         name: 'Personal Website',
+        date: 'Spring 2024',
         tags: ['Frontend', 'Design', 'Illustration'],
         img: '/projects/personal-website.png',
         description: 'This website! A personal portfolio and passion project, designed, illustrated & developed by yours truly. Tech stack: React, TypeScript, Next.js, TailwindCSS',
@@ -39,6 +43,7 @@ const projects = [
     {
         id: 104,
         name: 'Empathy Bytes',
+        date: 'Spring 2024',
         tags: ['Frontend',],
         img: '/projects/empathy-bytes.png',
         description: 'A vertically integrated research project at GT focused on developing immersive tech that platforms stories from our local community. I help design and full-stack development on the website and mobile app.',
@@ -46,15 +51,28 @@ const projects = [
         website: 'https://educast.library.gatech.edu/',
         github: 'https://github.com/genefu/empathy-bytes-react-native-app'
     },
-    // {
-    //     id: 105,
-    //     name: 'Deep fake paper',
-    //     tags: ['AI',],
-    //     img: '/projects/agora-website.png',
-    //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio justo, aliquam eget mollis ac, pellentesque sit amet eros. Aenean lacinia nulla urna, vitae laoreet turpis tincidunt eget. Nullam mollis justo nunc, nec sodales ex euismod quis. Cras varius ante quis tempus imperdiet. Quisque et turpis eu diam cursus condimentum non ac enim. Suspendisse viverra turpis in turpis semper elementum. Sed aliquam eget velit vel elementum. Sed ullamcorper diam ut arcu gravida aliquam. Phasellus consectetur lacus malesuada est vulputate, vitae lobortis dolor auctor. Phasellus auctor ipsum porttitor auctor pellentesque. Maecenas non mi aliquet, finibus metus vel, varius turpis. Pellentesque in lacus in mauris rutrum vehicula feugiat sed enim. Curabitur faucibus quis lacus eu mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut odio risus. Integer quis lorem lobortis, cursus felis vel, egestas sapien. Nullam iaculis quam nec lacinia varius. Phasellus dignissim congue imperdiet. Nulla non nulla tellus. Fusce tristique ligula sit amet purus semper, faucibus pulvinar mi pulvinar. Nam et fermentum neque. Proin vel turpis eu quam elementum convallis. Morbi in mi maximus ex pellentesque auctor ut sit amet ipsum. Ut cursus augue id tellus scelerisque luctus. In hac habitasse platea dictumst.',
-    //     href: '',
-    //     github: undefined,
-    // },
+    {
+        id: 105,
+        name: 'Deepfake Technology: Opportunity in the Foreboding',
+        date: 'Spring 2023',
+        tags: ['AI', 'Deep fake', 'Paper'],
+        img: '/projects/deep-fake.png',
+        description: "A research paper compiling various studies on deepfake innovations and related costs/benefits, in which I analyze the technology's social, political, and economic impacts. Follow the link below to read:",
+        href: 'https://drive.google.com/file/d/1b1HAzRucRy1gqRcHjn7ozF-9I9Dtfqbs/view',
+        website: 'https://drive.google.com/file/d/1b1HAzRucRy1gqRcHjn7ozF-9I9Dtfqbs/view',
+        github: undefined,
+    },
+    {
+        id: 106,
+        name: 'On Reader-Writer Experiences (English 1101 Portfolio)',
+        date: 'Fall 2022',
+        tags: ['Paper',],
+        img: '/projects/eng-portfolio.png',
+        description: 'An overview of my work from a semester of ENGL 1101: The Philosophy of Writing and the Forming Imagination, through which I explore the interaction between an author and their audience, reflect upon my own work, and share my conclusions on writing with awareness of reader-writer experiences.',
+        href: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
+        website: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
+        github: undefined,
+    },
     // {
     //     id: 106,
     //     name: 'Art & Journaling Portfolio',
@@ -227,35 +245,45 @@ export function Portfolio() {
                                            "xl:grid-cols-3"
                 )}>
                     {projects.map((item,i) => 
-                        <motion.div key={item.name} className="group xl:h-[52vh] h-[39vh] min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: .8, delay: .2+(.2*i)}}>
-                            <Link href={item.href} target='_blank'>
-                                {item.img ? 
-                                <div className='relative w-full xl:h-[27vh] h-[25vh] rounded-2xl overflow-hidden'>
-                                    <Image 
-                                        src={`${item.img}`}
-                                        alt={item.name + ' image'}
-                                        width='800'
-                                        height='800'
-                                        className='absolute object-cover h-full rounded-2xl ease-in-out duration-300 group-hover:scale-[110%]'/>
-                                </div>
-                                :
-                                <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
-                                }
-                                <div className="flex flex-col xl:h-[42%] h-[25%] justify-between">
-                                    <p className="mt-7 text-xl font-medium tracking-wide font-inter text-neutral-600">{item.name}</p>
-                                    <p className="invisible xl:visible text-sm text-neutral-400 font-inter leading-5 line-clamp-4">{item.description}</p>
-                                    <div className="flex gap-5 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
-                                        {item.website && <Link href={item.website} target="_blank" className="hover:underline">Website</Link>}
-                                        {item.github && <Link href={item.github} target="_blank" className="hover:underline">Github</Link>}
-                                        {item.figma && <Link href={item.figma} target="_blank" className="hover:underline">Figma</Link>}
+                        <Popover>
+                            <PopoverButton as="div">
+                                <motion.div key={item.name} className="group min-w-[30%] p-7 border-2 border-neutral-100 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: .8, delay: .2+(.2*i)}}>
+                                    <div>
+                                        {item.img ? 
+                                            <div className='relative w-full xl:h-[27vh] h-[25vh] rounded-2xl overflow-hidden'>
+                                                <Image 
+                                                    src={`${item.img}`}
+                                                    alt={item.name + ' image'}
+                                                    width='800'
+                                                    height='800'
+                                                    className='absolute object-cover h-full rounded-2xl ease-in-out duration-300 group-hover:scale-[110%]'/>
+                                            </div>
+                                        :
+                                            <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
+                                        }
+                                        <p className="mt-7 text-xl font-semibold tracking-wide text-neutral-600 line-clamp-1">{item.name}</p>
+                                        <p className="mt-3 text-sm text-neutral-400 font-inter leading-5 line-clamp-1">{item.date}</p>
                                     </div>
+                                </motion.div>
+                            </PopoverButton>
+                            <PopoverBackdrop className="fixed inset-0 bg-black/20 z-20" />
+                            <PopoverPanel transition className={classNames("z-30 w-[50vw] h-[70vh] bg-neutral-50 rounded-xl shadow-xl flex flex-col fixed left-[25%] top-[10%]",
+                                "transition duration-150 ease-out data-[closed]:scale-95 data-[closed]:opacity-0",
+                                "p-20"
+                            )}>
+                                <p className="mt-7 text-xl font-medium font-inter text-neutral-600">{item.name}</p>
+                                <p className="mt-3">{item.description}</p>
+                                <div className="flex mt-4 gap-5 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
+                                    {item.website && <Link href={item.website} target="_blank" className="hover:underline">Website</Link>}
+                                    {item.github && <Link href={item.github} target="_blank" className="hover:underline">Github</Link>}
+                                    {item.figma && <Link href={item.figma} target="_blank" className="hover:underline">Figma</Link>}
                                 </div>
-                            </Link>
-                        </motion.div>
+                            </PopoverPanel>
+                        </Popover>
                     )}
                 </div>
 
