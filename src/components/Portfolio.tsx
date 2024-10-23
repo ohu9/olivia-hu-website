@@ -11,9 +11,9 @@ const projects = [
         id: 101,
         name: 'UI Research & Design Project: Tasoki',
         date: 'Spring 2024',
-        tags: ['Frontend','Design', 'UI/UX'],
+        tags: ['Design', 'Research', 'UI/UX'],
         img: '/projects/tasoki2.png',
-        description: 'Applying UI/UX research techniques (from surveys to hierarchical task analysis to prototyping) to design a high-fidelity prototype of a work productivity app.',
+        description: 'As a team, we developed a high-fidelity prototype of a productivity app (called Tasoki) geared specifically towards busy undergrad students. <br/><br/><ol><li> • We first did a literature review and gathered extensive user research, conducting interviews and surveys, to better understand our target audience and create our project goals. </li><li>  • After further analysis we derived user requirements and generated user personas and use case scenarios. </li><li> • We then moved onto prototyping, going from sketches and storyboards to a high fidelity product. </li><li> • And finally, we presented our product and conducted usability/heuristic evaluations and improved our prototype.</ol> <br/><br/>Our entire process is documented in a series of write-ups and demos, viewable below:',
         href: 'https://drive.google.com/drive/folders/19wfm0CNIBkEg1STXewyT18SC7LGgu9Jr?usp=sharing',
         website: 'https://drive.google.com/drive/folders/19wfm0CNIBkEg1STXewyT18SC7LGgu9Jr?usp=sharing',
         github: undefined,
@@ -32,7 +32,7 @@ const projects = [
     {
         id: 103,
         name: 'Personal Website',
-        date: 'Spring 2024',
+        date: 'Fall 2023 – Present',
         tags: ['Frontend', 'Design', 'Illustration'],
         img: '/projects/personal-website.png',
         description: 'This website! A personal portfolio and passion project, designed, illustrated & developed by yours truly. Tech stack: React, TypeScript, Next.js, TailwindCSS',
@@ -43,8 +43,8 @@ const projects = [
     {
         id: 104,
         name: 'Empathy Bytes',
-        date: 'Spring 2024',
-        tags: ['Frontend',],
+        date: 'Fall 2023 – Present',
+        tags: ['Frontend', 'Design', 'UI/UX', 'Agile'],
         img: '/projects/empathy-bytes.png',
         description: 'A vertically integrated research project at GT focused on developing immersive tech that platforms stories from our local community. I help design and full-stack development on the website and mobile app.',
         href: 'https://educast.library.gatech.edu/',
@@ -53,9 +53,19 @@ const projects = [
     },
     {
         id: 105,
+        name: 'AndroidOS Mobile Game',
+        date: 'Fall 2023',
+        tags: ['Game Development', 'Agile'],
+        img: '/projects/android.png',
+        description: 'Developed a dungeon crawler mobile game in Android Studios; followed Agile development workflow: conducted sprints, scrum meetings, and utilized project management tools; constructed various UML diagrams to organize/delegate tasks and incorporate user requirements',
+        href: 'https://github.com/NevinGregory/CS2340A_Team15',
+        github: 'https://github.com/NevinGregory/CS2340A_Team15',
+    },
+    {
+        id: 106,
         name: 'Deepfake Technology: Opportunity in the Foreboding',
         date: 'Spring 2023',
-        tags: ['AI', 'Deep fake', 'Paper'],
+        tags: ['AI', 'Deep fake', 'Research paper'],
         img: '/projects/deep-fake.png',
         description: "A research paper compiling various studies on deepfake innovations and related costs/benefits, in which I analyze the technology's social, political, and economic impacts. Follow the link below to read:",
         href: 'https://drive.google.com/file/d/1b1HAzRucRy1gqRcHjn7ozF-9I9Dtfqbs/view',
@@ -63,12 +73,12 @@ const projects = [
         github: undefined,
     },
     {
-        id: 106,
+        id: 107,
         name: 'On Reader-Writer Experiences (English 1101 Portfolio)',
         date: 'Fall 2022',
-        tags: ['Paper',],
+        tags: ['Analysis', 'Paper'],
         img: '/projects/eng-portfolio.png',
-        description: 'An overview of my work from a semester of ENGL 1101: The Philosophy of Writing and the Forming Imagination, through which I explore the interaction between an author and their audience, reflect upon my own work, and share my conclusions on writing with awareness of reader-writer experiences.',
+        description: 'An overview of my work from a semester of ENGL 1101: The Philosophy of Writing and the Forming Imagination, through which I explore the interaction between an author and their audience, reflect upon my own work, and share my conclusions on writing with awareness of reader-writer experiences. Read the full portfolio via the Notion link below:',
         href: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
         website: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
         github: undefined,
@@ -266,7 +276,16 @@ export function Portfolio() {
                                             <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
                                         }
                                         <p className="mt-7 text-xl font-semibold tracking-wide text-neutral-600 line-clamp-1">{item.name}</p>
-                                        <p className="mt-3 text-sm text-neutral-400 font-inter leading-5 line-clamp-1">{item.date}</p>
+                                        <p className="mt-2 text-sm text-neutral-400 font-inter leading-5 line-clamp-1">{item.date}</p>
+                                        <div className="flex flex-row gap-2 mt-3">
+                                            {item.tags.map((tag,i) => 
+                                                <div key={i*10} className="px-3 py-[2px] text-neutral-500 bg-neutral-200 rounded-xl">
+                                                    <p className="text-xs font-inter line-clamp-1">
+                                                        {tag}
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </motion.div>
                             </PopoverButton>
@@ -276,7 +295,7 @@ export function Portfolio() {
                                 "p-20"
                             )}>
                                 <p className="mt-7 text-xl font-medium font-inter text-neutral-600">{item.name}</p>
-                                <p className="mt-3">{item.description}</p>
+                                <p className="mt-3" dangerouslySetInnerHTML={{ __html: item.description }} />
                                 <div className="flex mt-4 gap-5 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
                                     {item.website && <Link href={item.website} target="_blank" className="hover:underline">Website</Link>}
                                     {item.github && <Link href={item.github} target="_blank" className="hover:underline">Github</Link>}
@@ -388,9 +407,9 @@ export function MobilePortfolio() {
                         <div className="flex flex-col">
                             <p className="text-lg font-semibold font-inter text-neutral-600">{item.name}</p>
                             <div className="mt-3 flex gap-2 text-xs font-inter text-neutral-400 group-hover:text-neutral-700 transition-all duration-200">
-                                {item.website && <Link href={item.website} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Website</Link>}
-                                {item.github && <Link href={item.github} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Github</Link>}
-                                {item.figma && <Link href={item.figma} target="_blank" className="px-3 py-1 bg-neutral-700 hover:bg-neutral-900 text-white rounded-2xl">Figma</Link>}
+                                {item.website && <Link href={item.website} target="_blank" className="px-3 py-1 text-neutral-500 border-[1.5px] border-neutral-400 hover:bg-neutral-700 hover:text-white hover:border-neutral-700 transition-all duration-150 rounded-2xl">Website</Link>}
+                                {item.github && <Link href={item.github} target="_blank" className="px-3 py-1 text-neutral-500 border-[1.5px] border-neutral-400 hover:bg-neutral-700 hover:text-white hover:border-neutral-700 transition-all duration-150 rounded-2xl">Github</Link>}
+                                {item.figma && <Link href={item.figma} target="_blank" className="px-3 py-1 text-neutral-500 border-[1.5px] border-neutral-400 hover:bg-neutral-700 hover:text-white hover:border-neutral-700 transition-all duration-150 rounded-2xl">Figma</Link>}
                             </div>
                         </div>
                     </Link>
