@@ -46,10 +46,11 @@ const projects = [
         date: 'Fall 2023 – Present',
         tags: ['Frontend', 'Design', 'UI/UX', 'Agile'],
         img: '/projects/empathy-bytes.png',
-        description: 'A vertically integrated research project at GT focused on developing immersive tech that platforms stories from our local community. I help design and full-stack development on the website and mobile app.',
+        description: "A vertically integrated research project at GT focused on developing immersive tech that platforms stories from our local community. <br/><br/><b>Empathy Bytes Website</b><br/>I helped maintain the backend, hosted on Drupal, and developed its integration into the frontend using GraphQL.<br/>Tech stack: React, JavaScript, GatsbyJS, GraphQL, Drupal<br/><br/><b>Empathy Bytes App</b><br/>I contributed to the app design (see Figma file) and worked on the frontend implementation. We followed an Agile-style sprint schedule and collaborated remotely using Github and Discord.<br/>Tech stack: ReactNative, Expo, JavaScript, FireBase<br/><br/><b>BuzzQuest (Scavenger Hunt App)</b><br/>This semester, we are starting to develop a new game app that features an interactive map of Georgia Tech's campus. I helped develope the UX flows and screen mappings as well as front end development and user authentication.<br/>Tech stack: ReactNative, Expo, JavaScript, FireBase",
         href: 'https://educast.library.gatech.edu/',
         website: 'https://educast.library.gatech.edu/',
-        github: 'https://github.com/genefu/empathy-bytes-react-native-app'
+        github: 'https://github.com/genefu/empathy-bytes-react-native-app',
+        figma: 'https://www.figma.com/design/ioNLWT73w6YHu6ul1geDDD/Empathy-Bytes-Pages?node-id=0-1&t=cICnDb3FZQ1P3GI4-1',
     },
     {
         id: 105,
