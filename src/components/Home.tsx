@@ -53,7 +53,7 @@ export function Home() {
                     animate={{ opacity:1, x:0 }}
                     exit={{ opacity:0, y:-20 }}
                     transition={{duration: 0.6, delay:1.0}}>
-                    graphics designer &amp; engineer
+                    data scientist &amp; visual analyst
                 </motion.div>
                 <motion.div 
                     initial={{ opacity: 0, x:15 }}
