@@ -79,11 +79,14 @@ export default function Navbar() {
                             key={tab.name}
                             href={tab.href} 
                             target={tab.target}
-                            className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
-                                scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name != 'projects' && "text-zinc-200 opacity-75 hover:text-zinc-300 hover:opacity-100",
-                                scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name == 'projects' && "text-white",
-                                scrollPosition < tabs[1].range[0] || scrollPosition >= tabs[1].range[1] && "hover:text-zinc-700",
+                            className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "opacity-100 italic" : "opacity-45 hover:opacity-80",
+                                scrollPosition >= tabs[2].range[0]+70 && scrollPosition < tabs[2].range[1]+70 ? "text-white" : "text-black",
                                 "text-2xl tracking-wide font-playfair leading-none transition duration-100")}>
+                            {/* className={classNames(scrollPosition >= tab.range[0] && scrollPosition < tab.range[1] ? "text-black italic" : "text-zinc-400",
+                             scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name != 'projects' && "text-zinc-200 hover:text-zinc-200",
+                             scrollPosition >= tabs[2].range[0] && scrollPosition < tabs[2].range[1] && tab.name == 'projects' && "text-white hover:text-white",
+                             scrollPosition <= tabs[2].range[1]&& "hover:text-zinc-700", scrollPosition >= tabs[2].range[1] && "hover:text-zinc-700",
+                             "text-2xl tracking-wide font-playfair leading-none transition duration-100")}> */}
                             {tab.name.toUpperCase()}
                         </Link>
                     </motion.div>
