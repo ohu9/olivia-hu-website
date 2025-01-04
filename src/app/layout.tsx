@@ -46,7 +46,7 @@ export default function RootLayout({
 				<link rel="icon" href="/logo.png" />
 			</head>
 			<body className='relative font-cormorant'>
-				<Navbar />
+				{/* <Navbar /> */}
 				{/* <Sidebar /> */}
 				<main className="">
 					{children}
