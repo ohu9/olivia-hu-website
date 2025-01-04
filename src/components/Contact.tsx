@@ -6,21 +6,25 @@ import email_img from '/email.png'
 
 const links = [
     {
+        id: 1,
         label: "Email",
         href: "mailto:oliviahu@gatech.edu",
         img: "/email.png",
     },
     {
+        id: 2,
         label: "GitHub",
         href: "https://github.com/ohu9",
         img: "/github.png",
     },
     {
+        id: 3,
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/oliviahhu/",
         img: "/linkedin.png",
     },
     {
+        id: 4,
         label: "Resume",
         href: "https://drive.google.com/file/d/1bNhmnoFNlzsFNvxx0OTKhnY_nhL20t4z/view",
         img: "/resume.png",
@@ -50,9 +54,10 @@ export default function Contact() {
                     Let&apos;s get in touch &mdash; I&apos;d love to talk more.
                 </motion.div>
                 <div className="flex flex-col gap-2 mt-12">
-                    {links.map((link,i) => <>
+                    {links.map((link,i) => 
+                    <>
                         <motion.div
-                            key={link.label}
+                            key={link.id}
                             initial={{ opacity: 0, x:30 }}
                             whileInView={{ opacity: 1, x:0 }}
                             viewport={{ once: true }}
