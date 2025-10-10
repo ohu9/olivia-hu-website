@@ -9,6 +9,92 @@ import Link from "next/link";
 export function Experience() {
     return (
         <div className="hidden lg:block">
+            {/* AMAZON */}
+            <div className="flex flex-col lg:flex-row lg:items-end lg:gap-14 w-full h-[60vh] mt-32">
+                {/* <motion.img 
+                    initial={{ opacity: 0, y:15 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .3}}
+
+                    src='/moose.png'
+                    alt='rocket drones image'
+                    width='800'
+                    height='800'
+                    className='object-contain w-full lg:ml-32 lg:w-[40%]'/> */}
+                <motion.div className={classNames("xl:w-[70%] lg:w-[60%] h-auto lg:bg-[#1c1f30] lg:pl-20 lg:pr-10 xl:py-32 py-20 mx-auto",
+                                        "px-16 text-white font-ebg"
+                )}
+                    initial={{ opacity: 0, y:15 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .4}}>
+                    <p className="font-playfair xl:text-5xl text-4xl font-bold tracking-[.4rem]">AMAZON</p>
+                    <p className="font-inter font-bold tracking-[.4rem] my-5">SOFTWARE DEVELOPMENT ENGINEER INTERN</p>
+                    <p className="italic tracking-wide opacity-70">May – August 2025</p>
+                    <ul className="mt-10 list-disc">
+                        <li className="ml-8 mt-3">End-to-end development of a production-ready feature, from vetting data sources, writing SQL queries, updating data ingestion pipeline, and developing front-end interface</li>
+                        <li className="ml-8 mt-3">Collaborated with project managers, stakeholders, designers, and engineers to research/resolve technological and business ambiguities</li>
+                        <li className="ml-8 mt-3">Partnered with UX team on feature UI, conduct user tests on prototypes and beta releases, incorporate feedback in product iterations</li>
+                        <li className="ml-8 mt-3">Wrote unit and integration tests to ensure software functionality, security, and performance</li>
+                    </ul>
+                    {/* <p className="mt-10"><b>Project Description</b>: As a part of team in Seller Central, I worked on a new vendor-facing tool  </p> */}
+                </motion.div>
+            </div>
+
+            {/* MATMERIZE */}
+            <div className="flex flex-col justify-center xl:flex-row lg:gap-12 w-full lg:mt-32 xl:px-52 lg:px-32 md:mt-80 mt-72">
+                <motion.div className={classNames("h-auto bg-[#7994bc] lg:px-32 px-16 py-16 text-blue-50 font-ebg flex flex-col justify-center"
+                )}
+                    initial={{ opacity: 0, y:15 }}
+                    whileInView={{ opacity: 1, y:0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: .8, delay: .3}}>
+                    <span className="inline font-playfair xl:text-5xl text-4xl font-bold tracking-[.4rem]">MATMERIZE
+                        <p className="inline ml-4 tracking-wider font-normal font-inter text-xs">| &nbsp;&nbsp;AI-powered material design solutions</p>
+                    </span>
+                    <motion.div
+                        initial={{ opacity: 0, y:15 }}
+                        whileInView={{ opacity: 1, y:0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: .8, delay: .5}}>
+                        <p className="font-inter font-bold tracking-[.4rem] mt-8">FRONTEND DEVELOPER INTERN</p>
+                        <p className="italic tracking-wide opacity-80 my-2">January – April 2025</p>
+                        <ul className="list-disc">
+                            <li className="ml-8 mt-[2px]">Updated and maintained front-end of production website; developed various bug fixes and feature requests</li>
+                            <li className="ml-8 mt-[2px]">Implemented data processing and chart visualization interfaces using D3 and Jinja2; collaborated with back-end and AI teams </li>
+                            <li className="ml-8 mt-[2px]">Worked directly with Director of SWE and Lead Front-end Developer on UI design, codebase organization, and algorithmic tasks</li>
+                        </ul>
+
+                        {/* buttons */}
+                        <div className="flex gap-3 my-8">
+                            <motion.div 
+                                initial={{ opacity: 0, x:15 }}
+                                whileInView={{ opacity: 1, x:0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: .8, delay: .4}}>
+                                <LinkButton color="white" href='https://www.matmerize.com/' label='MATMERIZE WEBSITE'/>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+                </motion.div>
+
+                {/* image column */}
+                <div className="hidden xl:flex xl:flex-col w-1/3">
+                    <motion.img 
+                        initial={{ opacity: 0, y:15 }}
+                        whileInView={{ opacity: 1, y:0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: .8, delay: .5}}
+
+                        src='/projects/matmerize.png'
+                        alt='agora image'
+                        width='800'
+                        height='1000'
+                        className='object-cover'/>
+                </div>
+            </div>
+
             {/* ROCKET DRONES */}
             <div className="flex flex-col lg:flex-row lg:items-end lg:gap-14 w-full h-[60vh] mt-32">
                 <motion.img 
@@ -28,7 +114,7 @@ export function Experience() {
                     initial={{ opacity: 0, y:15 }}
                     whileInView={{ opacity: 1, y:0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: .8, delay: .6}}>
+                    transition={{ duration: .8, delay: .4}}>
                     <p className="font-playfair xl:text-5xl text-4xl font-bold tracking-[.4rem]">ROCKET DRONES</p>
                     <p className="font-inter font-bold tracking-[.4rem] my-5">FULL STACK DEVELOPMENT INTERN</p>
                     <p className="italic tracking-wide opacity-70">Winter – Summer 2024</p>
@@ -90,7 +176,7 @@ export function Experience() {
                                 initial={{ opacity: 0, x:15 }}
                                 whileInView={{ opacity: 1, x:0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: .8, delay: .6}}>
+                                transition={{ duration: .8, delay: .4}}>
                                 <LinkButton color="black" href='https://github.com/GTagora/AgoraFrontend' label='GITHUB'/>
                             </motion.div>
                         </div>
@@ -138,7 +224,7 @@ export function Experience() {
                         initial={{ opacity: 0, y:15 }}
                         whileInView={{ opacity: 1, y:0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: .8, delay: .6}}
+                        transition={{ duration: .8, delay: .4}}
 
                         src='/projects/agora-booklets.jpg'
                         alt='agora booklets image'
@@ -155,6 +241,36 @@ export function Experience() {
 export function MobileExperience() {
     return (
         <div className="block lg:hidden mx-10">
+            {/* AMAZON */}
+            <div className="flex flex-col mt-10 h-auto">
+                <div className="bg-[#1c1f30] px-16 text-white font-ebg pb-16">
+                    <p className="font-playfair text-4xl mt-16 font-bold tracking-[.4rem]">AMAZON</p>
+                    <p className="font-inter font-bold tracking-[.2rem] my-5">SOFTWARE DEVELOPMENT ENGINEER DEVELOPMENT INTERN</p>
+                    <p className="italic tracking-wide opacity-70">May – August 2025</p>
+                    <ul className="mt-6 list-disc">
+                        <li className="ml-8 mt-3">End-to-end development of a production-ready feature, from vetting data sources, writing SQL queries, updating data ingestion pipeline, and developing front-end interface</li>
+                        <li className="ml-8 mt-3">Collaborated with project managers, stakeholders, designers, and engineers to research/resolve technological and business ambiguities</li>
+                        <li className="ml-8 mt-3">Partnered with UX team on feature UI, conduct user tests on prototypes and beta releases, incorporate feedback in product iterations</li>
+                        <li className="ml-8 mt-3">Wrote unit and integration tests to ensure software functionality, security, and performance</li>
+                    </ul>
+                </div>
+            </div>
+            {/* MATMERIZE */}
+            <div className="flex flex-col mt-10 h-auto">
+                <div className="bg-[#7994bc] px-16 text-white font-ebg pb-16">
+                    <p className="font-playfair text-4xl mt-16 font-bold tracking-[.4rem]">MATMERIZE</p>
+                    <p className="font-inter font-bold tracking-[.2rem] my-5">FRONTEND DEVELOPER INTERN</p>
+                    <p className="italic tracking-wide opacity-70">Janurary – April 2025</p>
+                    <ul className="list-disc">
+                        <li className="ml-8 mt-[2px]">Updated and maintained front-end of production website; developed various bug fixes and feature requests</li>
+                        <li className="ml-8 mt-[2px]">Implemented data processing and chart visualization interfaces using D3 and Jinja2; collaborated with back-end and AI teams </li>
+                        <li className="ml-8 mt-[2px]">Worked directly with Director of SWE and Lead Front-end Developer on UI design, codebase organization, and algorithmic tasks</li>
+                    </ul>
+                    <div className="mt-10">
+                        <LinkButton color="white" href='https://www.matmerize.com/' label='WEBSITE'/>
+                    </div>
+                </div>
+            </div>
             {/* ROCKET DRONES */}
             <div className="flex flex-col mt-10 h-auto">
                 <Image

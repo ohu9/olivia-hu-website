@@ -79,7 +79,7 @@ const projects = [
         date: 'Fall 2022',
         tags: ['Analysis', 'Paper'],
         img: '/projects/eng-portfolio.png',
-        description: 'An overview of my work from a semester of ENGL 1101: The Philosophy of Writing and the Forming Imagination, through which I explore the interaction between an author and their audience, reflect upon my own work, and share my conclusions on writing with awareness of reader-writer experiences. Read the full portfolio via the Notion link below:',
+        description: 'Award for Best ENGL Portfolio in 2022-23. An overview of my work from a semester of ENGL 1101: The Philosophy of Writing and the Forming Imagination, through which I explore the interaction between an author and their audience, reflect upon my own work, and share my conclusions on writing with awareness of reader-writer experiences. Read the full portfolio via the Notion link below:',
         href: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
         website: 'https://ohu-9.notion.site/The-Scene-ENGL-1101-ePortfolio-d0660697fadb429a86ff8dbd2ac03714',
         github: undefined,
@@ -114,36 +114,36 @@ export function Projects() {
                 <p className="self-end tracking-wider font-bold text-yellow-50 text-[90pt] italic mr-40 mb-16">
 					PROJECTS
 				</p>
-                <div className={classNames("grid grid-cols-2 gap-12 w-3/4 mx-auto mb-24",
-                                           "xl:grid-cols-3"
+                <div className={classNames("grid grid-cols-2 gap-6 w-3/4 mx-auto mb-24",
+                                           "xl:grid-cols-3 xl:w-2/3"
                 )}>
                     {projects.map((item,i) => 
                         <Popover key={item.name}>
                             <PopoverButton as="div">
-                                <motion.div className="group min-w-[30%] p-7 bg-neutral-50 border-2 border-neutral-50 rounded-2xl shadow-md hover:shadow-md transition-all duration-200"
+                                <motion.div className="group min-w-[30%] p-7 border-2 border-neutral-50 rounded-xl shadow-md hover:shadow-md transition-all duration-200"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: .8, delay: (.15*i)}}>
                                     <div>
                                         {item.img ? 
-                                            <div className='relative w-full xl:h-[27vh] h-[25vh] rounded-2xl overflow-hidden'>
+                                            <div className='relative w-full xl:h-[27vh] h-[25vh] rounded-sm overflow-hidden'>
                                                 <Image 
                                                     src={`${item.img}`}
                                                     alt={item.name + ' image'}
                                                     width='800'
                                                     height='800'
-                                                    className='absolute object-cover h-full rounded-2xl ease-in-out duration-300 group-hover:scale-[110%]'/>
+                                                    className='absolute object-cover h-full ease-in-out rounded-sm duration-300 group-hover:scale-[110%]'/>
                                             </div>
                                         :
                                             <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
                                         }
-                                        <p className="mt-7 text-xl font-semibold tracking-wide text-neutral-600 line-clamp-1">{item.name}</p>
-                                        <p className="mt-2 text-sm text-neutral-400 font-inter leading-5 line-clamp-1">{item.date}</p>
+                                        <p className="px-2 py-1 text-xl font-semibold tracking-wide bg-yellow-50 text-[#2e2414] line-clamp-1">{item.name}</p>
+                                        <p className="mt-2 text-xs text-yellow-50 font-inter leading-5 line-clamp-1">{item.date}</p>
                                         <div className="flex flex-row gap-2 mt-3">
                                             {item.tags.map((tag,i) => 
-                                                <div key={i*10} className="px-3 py-[2px] text-neutral-500 bg-neutral-200 rounded-xl">
-                                                    <p className="text-xs font-inter line-clamp-1">
+                                                <div key={i*10} className="px-3 py-[2px] text-neutral-100 border border-solid border-neutral-100 rounded-xl">
+                                                    <p className="text-[.7rem] font-inter line-clamp-1">
                                                         {tag}
                                                     </p>
                                                 </div>
