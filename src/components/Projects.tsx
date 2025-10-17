@@ -8,6 +8,17 @@ import Link from "next/link";
 
 const projects = [
     {
+        id: 100,
+        name: 'Earthquake Infrastructure Damage Classification Project',
+        date: 'Fall 2025',
+        tags: ['Data & Visual Analytics', 'UI/UX', 'd3.js'],
+        img: '/projects/eid-project2.png',
+        description: 'This dashboard was completed as a final project for CSE6242 Data &amp; Visual Analytics. As a team of seven developers, we: <br/><br/><ul><li>• Designed and developed an interactive dashboard that allows users to classify images and integrated large image database and AI model on the backend</li><li>• Trained a CNN on labeled data to provide labeling suggestions to improve user classification accuracy</li><li>• Worked with PhD candidate Huili Hu  to conduct a literature review, build full-stack website, run user tests, productionalize dashboard, and present findings to be used in PhD research</li></ul>',
+        href: '',
+        figma: 'https://www.figma.com/design/C47jqqpgFUUn9VOBPgZaa9/EID-Classification-Project-Wireframe?node-id=0-1&t=S1uEao4ujTF6iOEs-1',
+        github: undefined,
+    },
+    {
         id: 101,
         name: 'UI Research & Design Project: Tasoki',
         date: 'Spring 2024',
@@ -111,7 +122,7 @@ export function Projects() {
                             <span className="inline w-52 h-[1px] bg-black"/>
                         </div> 
                 </motion.div> */}
-                <p className="self-end tracking-wider font-bold text-yellow-50 text-[90pt] italic mr-40 mb-16">
+                <p className="self-end tracking-wider font-bold text-neutral-50 text-[90pt] italic mr-40 mb-16">
 					PROJECTS
 				</p>
                 <div className={classNames("grid grid-cols-2 gap-6 w-3/4 mx-auto mb-24",
@@ -120,7 +131,7 @@ export function Projects() {
                     {projects.map((item,i) => 
                         <Popover key={item.name}>
                             <PopoverButton as="div">
-                                <motion.div className="group min-w-[30%] p-7 border-2 border-neutral-50 rounded-xl shadow-md hover:shadow-md transition-all duration-200"
+                                <motion.div className="group min-w-[30%] p-7 border-2 border-neutral-50 bg-neutral-100 rounded-xl shadow-md hover:shadow-md transition-all duration-200"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
@@ -133,16 +144,16 @@ export function Projects() {
                                                     alt={item.name + ' image'}
                                                     width='800'
                                                     height='800'
-                                                    className='absolute object-cover h-full ease-in-out rounded-sm duration-300 group-hover:scale-[110%]'/>
+                                                    className='absolute object-cover h-full ease-in-out rounded-sm duration-300 group-hover:scale-[105%]'/>
                                             </div>
                                         :
                                             <div className="w-full h-[60%] bg-neutral-200 rounded-2xl"/>
                                         }
-                                        <p className="px-2 py-1 text-xl font-semibold tracking-wide bg-yellow-50 text-[#2e2414] line-clamp-1">{item.name}</p>
-                                        <p className="mt-2 text-xs text-yellow-50 font-inter leading-5 line-clamp-1">{item.date}</p>
+                                        <p className="my-2 text-xl font-semibold tracking-wide text-neutral-900 line-clamp-2">{item.name}</p>
+                                        <p className="mt-2 text-xs text-neutral-500 font-inter leading-5 line-clamp-1">{item.date}</p>
                                         <div className="flex flex-row gap-2 mt-3">
                                             {item.tags.map((tag,i) => 
-                                                <div key={i*10} className="px-3 py-[2px] text-neutral-100 border border-solid border-neutral-100 rounded-xl">
+                                                <div key={i*10} className="px-3 py-[2px] text-neutral-400 border border-solid border-neutral-400 rounded-xl">
                                                     <p className="text-[.7rem] font-inter line-clamp-1">
                                                         {tag}
                                                     </p>
